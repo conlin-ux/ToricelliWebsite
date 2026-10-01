@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conclusions | Torricelli's Law | Team Wed-3</title>
+  <meta name="description" content="Conclusions, assessment of effectiveness, comparison with references and industry practice, supervisor recommendations and suggested improvements.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='7' y='3' width='12' height='26' rx='2' fill='%23fff' stroke='%23cc0000' stroke-width='2'/%3E%3Crect x='8' y='11' width='10' height='17' fill='%23cc0000' opacity='.3'/%3E%3Cpath d='M19 26 q7 0 9 5' fill='none' stroke='%23cc0000' stroke-width='2.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="3" width="12" height="26" rx="2" fill="#fff" stroke="#cc0000" stroke-width="2"/><rect x="8" y="11" width="10" height="17" fill="#cc0000" opacity=".22"/><path d="M19 26 q7 0 9 5" fill="none" stroke="#cc0000" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span class="brand-text"><span class="brand-title">Torricelli's Law</span><span class="brand-sub">Team Wed-3 · Fluid Mechanics Experiment 1</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="theory.html">Theory</a></li>
+        <li><a href="data.html">Data &amp; Experiment</a></li>
+        <li><a href="conclusions.html" aria-current="page">Conclusions</a></li>
+        <li><a href="attachments.html">Attachments</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <header class="page-head">
+    <p class="eyebrow">Conclusions</p>
+    <h1>How well does Torricelli's law hold?</h1>
+    <p class="lede">Very well for the 1/8 in orifice and reasonably well for the 3/16 in orifice. Our overall verdict on the experiment is <strong>effective, with caveats</strong>.</p>
+    <ul class="toc">
+      <li><a href="#main-conclusions">Main conclusions</a></li>
+      <li><a href="#assessment">Assessment</a></li>
+      <li><a href="#comparison">Comparison with references</a></li>
+      <li><a href="#industry">Industry practice</a></li>
+      <li><a href="#supervisor">Supervisor recommendations</a></li>
+      <li><a href="#prelab-check">Pre-lab check</a></li>
+      <li><a href="#improvements">Improvements</a></li>
+      <li><a href="#references">References</a></li>
+    </ul>
+  </header>
+
+  <section class="card" id="main-conclusions" aria-labelledby="mc-h">
+    <h2 id="mc-h"><span class="sec-num">01</span> Main conclusions</h2>
+    <div class="stats">
+      <div class="stat"><div class="label">1/8 in · height R²</div><div class="value">0.998–0.999</div></div>
+      <div class="stat"><div class="label">1/8 in · velocity R²</div><div class="value">0.92–0.94</div></div>
+      <div class="stat"><div class="label">3/16 in · height R²</div><div class="value">0.94–0.95</div></div>
+      <div class="stat"><div class="label">3/16 in · velocity R²</div><div class="value">0.72–0.76</div></div>
+    </div>
+    <ol class="steps prose">
+      <li><strong>Liquid height, h(t).</strong> The quasi-steady Torricelli model (Eq. 7) predicted the drainage of the 1/8 in orifice almost exactly (average R² ≥ 0.998 in all three suites). For the 3/16 in orifice the measured level stayed above the model for most of each run (R² 0.94–0.95), meaning the real flow rate was lower than ideal.</li>
+      <li><strong>Exit velocity, v₂.</strong> Velocities from the running-average derivative followed the ideal √(2gh) line for the 1/8 in orifice (R² 0.92–0.94), with scatter caused by the large area ratio. For the 3/16 in orifice, v₂ was below theory at the start and above the theoretical line near the end (R² 0.72–0.76), the signature of a slower-than-ideal drain when data and theory are compared at equal times.</li>
+      <li><strong>Drain time.</strong> Measured drain times were 9.4–12.1 % shorter than theoretical for the 1/8 in orifice and 3.9–5.0 % shorter for the 3/16 in orifice (<a href="data.html#drain-times">Table 5</a>). Most of this gap comes from the end points: theory drains to 0 in, while we measured to the first reading at or below 0.1 in, and the ideal model spends about 6–7.5 % of the drain time on that last 0.1 in. Truncated runs (ᵃ) and the 1/8 in sensor zero offset shorten the measured times further. The 3/16 in orifice drained 2.08, 2.19 and 2.14 times faster than the 1/8 in orifice at 18, 22 and 27 in (ratio of mean drain times), slightly below the ideal (3/16 ÷ 1/8)² = 2.25 because the larger orifice drained more slowly than ideal (<a href="data.html#fig4">Figure 4</a>).</li>
+      <li><strong>Non-ideal losses.</strong> Real orifices pass less flow than the ideal model because of friction and jet contraction (the vena contracta), described by a discharge coefficient C<sub>d</sub> &lt; 1. The 3/16 in results show this clearly. The near-ideal 1/8 in results suggest that its effective losses were small in our rig; we did not measure the orifice edge geometry, so we cannot say why the two flanges differ, and we list this as an improvement below.</li>
+    </ol>
+  </section>
+
+  <section class="card" id="assessment" aria-labelledby="as-h">
+    <h2 id="as-h"><span class="sec-num">02</span> Assessment of the experiment: effective, with caveats</h2>
+    <div class="grid-2">
+      <div class="panel" style="margin:0">
+        <h3 style="margin-top:0">What worked</h3>
+        <ul>
+          <li>Torricelli's law was validated well for the 1/8 in orifice (height R² ≥ 0.998, velocity R² 0.92–0.94) and reasonably for the 3/16 in orifice (height R² 0.94–0.95, velocity R² 0.72–0.76).</li>
+          <li>Four repeats per suite were highly repeatable for the 1/8 in orifice (drain-time SD 0.5–1.3 s).</li>
+          <li>The ultrasonic sensor's 3.15–47.2 in range covers the whole column without contact with the water.</li>
+        </ul>
+      </div>
+      <div class="panel note" style="margin:0">
+        <h3 style="margin-top:0">Caveats</h3>
+        <ul>
+          <li><strong>Logging lag and truncated runs.</strong> The logged height lagged behind the water level, and because we stopped recording when the column looked empty, the ends of several runs were cut off. Six of the 24 runs never reached the 0.1 in threshold, and this raised the drain-time SD for the 3/16 in orifice (2.5–3.7 s).</li>
+          <li><strong>End-point threshold.</strong> The 0.1 in threshold, needed because the sensor rarely reads exactly 0, is behind most of the drain-time gap.</li>
+          <li><strong>Start heights.</strong> The 3/16 in trials started farther from the nominal heights than the 1/8 in trials.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="comparison" aria-labelledby="cmp-h">
+    <h2 id="cmp-h"><span class="sec-num">03</span> Comparison with references and similar experiments</h2>
+    <div class="prose">
+      <h3 style="margin-top:0">Textbook analysis (de Nevers and Silcox 2021)</h3>
+      <p>Our course textbook provides Bernoulli's equation (Eq. 1), the assumptions that reduce it to Torricelli's law, and the tank-draining, time-to-drain analysis behind Eqs. 5–8. Our data reproduce its central prediction: the level falls as a parabola in time, with √h decreasing linearly. The 1/8 in orifice matched the frictionless version of that analysis almost exactly; the 3/16 in orifice matched its shape but drained more slowly, as expected when the friction term the textbook includes in Eq. 1 is not zero.</p>
+
+      <h3>Open-access derivation (Halpern 2024)</h3>
+      <p>Halpern derives v = √(2gh) with the same assumptions we used (incompressible, frictionless flow, atmospheric pressure at both points, negligible surface velocity) and applies it to the range of jets from a cylinder with several holes. It does not treat discharge coefficients, drain time or experimental data. Our measurements support its ideal result for the 1/8 in orifice and show, for the 3/16 in orifice, the losses that the ideal treatment leaves out.</p>
+
+      <h3>Published Torricelli experiment (Alvaro-Berlanga, Planet, and Fernandez-Nieves 2024)</h3>
+      <p>This peer-reviewed study is the closest to our experiment. According to its abstract, it applies momentum balances to Torricelli's problem, finds that the momentum-conservation result contradicts one obtained by integrating the stress tensor, and resolves the conflict by revisiting the initial assumptions using experimental observations. Its message, that the ideal assumptions about flow at the orifice do not fully describe a real draining tank, is consistent with our results: the ideal model worked for one orifice but overpredicted the flow through the other. (We rely only on the paper's abstract and make no comparison with numbers from the full text.)</p>
+    </div>
+  </section>
+
+  <section class="card" id="industry" aria-labelledby="ind-h">
+    <h2 id="ind-h"><span class="sec-num">04</span> Performance against industry practice</h2>
+    <div class="prose">
+      <p><strong>Flow through orifices.</strong> In engineering practice the ideal Torricelli velocity is not used on its own to size or meter flow through an orifice; it is always multiplied by an empirically determined discharge coefficient that accounts for friction and jet contraction. Our results show why: one of our two orifices would have been overpredicted by the ideal model. A practical rig would calibrate C<sub>d</sub> for each orifice before using it for prediction.</p>
+      <p><strong>Level measurement.</strong> The ifm UGT507 is an industrial level sensor with a linearity error and hysteresis each below 1 % and a rated accuracy after a 20 min warm-up (ifm UGT507 datasheet). This is more than adequate over most of the column. Near the bottom, however, where the remaining water is only a fraction of an inch deep, even a small fraction of the sensing distance is comparable to the reading itself, which is consistent with the −0.2 in offset at the end of the 1/8 in runs. The Opto22 SNAP PAC R-Series controller logged data at about 1 s intervals; the lag we observed means the logger's timestamps, not the sensor, set the limit on timing accuracy in our runs.</p>
+    </div>
+  </section>
+
+  <section class="card" id="supervisor" aria-labelledby="sup-h">
+    <h2 id="sup-h"><span class="sec-num">05</span> Recommendations from our supervisor</h2>
+    <p class="prose">Our supervisor made two recommendations for the analysis. Both were followed throughout this report.</p>
+    <div class="grid-2">
+      <div class="panel" style="margin:0">
+        <h3 style="margin-top:0">1 · Use regression with R², not standard error bars, for continuous data</h3>
+        <p><strong>How we applied it:</strong> every height and velocity time series is compared against the ideal Torricelli curve with R², computed for each trial and averaged over the four trials (Eq. 11, <a href="data.html#table4">Table 4</a>). The model curve and average R² are shown on every plot, and the continuous plots carry no error bars. Error bars in the form of mean ± SD are kept for the discrete summary values, the drain times, both in <a href="data.html#table5">Table 5</a> and as error bars in <a href="data.html#fig4">Figure 4</a>.</p>
+        <p><strong>What it showed:</strong> R² gave a single, comparable agreement score for all 12 plots. It separated the orifices clearly (height R² ≥ 0.998 vs. 0.94–0.95) and showed that velocity agreement is always weaker than height agreement.</p>
+      </div>
+      <div class="panel" style="margin:0">
+        <h3 style="margin-top:0">2 · Compute velocity from "real-time" running-average derivatives</h3>
+        <p><strong>How we applied it:</strong> we did not fit h(t) and differentiate the fit. Instead, dh/dt at each logged point is the slope of a least-squares line through a centered 5-point window (about 5 s of data), and v₂ = −(A₁/A₂)·dh/dt (Eq. 10). Fits are used only to evaluate agreement, not to produce velocities.</p>
+        <p><strong>What it showed:</strong> the velocities reflect what the column actually did, including the slower-than-ideal 3/16 in flow, rather than the shape of an assumed function. The averaging window was essential: with area ratios of 441 and 196, single reading steps would otherwise dominate. Even with the window, the 1/8 in velocities still scatter by tens of in/s around the trend, which shows the method's limit at this sampling rate and height resolution.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="prelab-check" aria-labelledby="pc-h">
+    <h2 id="pc-h"><span class="sec-num">06</span> Did the results match our pre-lab predictions?</h2>
+    <div class="table-wrap">
+      <table>
+        <caption><strong>Table 6.</strong> Pre-lab predictions (<a href="theory.html#prelab">Theory page</a>) compared with our results.</caption>
+        <thead><tr><th>Pre-lab prediction</th><th>What we found</th><th>Match?</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Q4: exit velocity at a given height does not depend on orifice size.</td>
+            <td>Only partly. The 1/8 in orifice followed √(2gh) closely, but the 3/16 in orifice ran below it early in each run, so at equal heights the two orifices did not give identical velocities.</td>
+            <td class="key">Partly</td>
+          </tr>
+          <tr>
+            <td>Q4: the 3/16 in orifice drains (3/16 ÷ 1/8)² = 2.25× faster.</td>
+            <td>Measured mean drain-time ratios (1/8 in ÷ 3/16 in, Table 5) were 2.08, 2.19 and 2.14 at 18, 22 and 27 in. These are a little below 2.25 because the 3/16 in orifice drained more slowly than ideal.</td>
+            <td class="key">Close</td>
+          </tr>
+          <tr>
+            <td>Q3/Q4: in reality, friction, turbulence and vena-contracta effects make the exit velocity lower than ideal.</td>
+            <td>Seen clearly for the 3/16 in orifice; for the 1/8 in orifice the losses were too small to detect with our data.</td>
+            <td class="key">Yes (3/16 in)</td>
+          </tr>
+          <tr>
+            <td>Q2: the listed assumptions reduce Bernoulli's equation to Torricelli's law.</td>
+            <td>Supported: the quasi-steady check (dv₂/dt ≤ 1.97 in/s² ≪ g) and the negligible (A₂/A₁)² term confirm the assumptions for our geometry.</td>
+            <td class="key">Yes</td>
+          </tr>
+          <tr>
+            <td>Q1/Q5: safety plan and procedure (2 orifices × 3 heights × 4 trials).</td>
+            <td>All 24 runs were completed as planned without incident. The one departure was the logging lag, which cut off the ends of some runs.</td>
+            <td class="key">Yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card" id="improvements" aria-labelledby="imp-h">
+    <h2 id="imp-h"><span class="sec-num">07</span> Suggested improvements</h2>
+    <div class="grid-2">
+      <div class="prose">
+        <h3 style="margin-top:0">From our lab-day observations</h3>
+        <ul>
+          <li><strong>Keep logging for at least 10 s after the column appears empty</strong>, to allow for the logging lag and capture the true end of every run.</li>
+          <li><strong>Check the logger's timestamps against a stopwatch</strong> to measure the lag and correct for it.</li>
+          <li><strong>Let the ultrasonic sensor warm up for 20 min</strong> before the first run, as its datasheet specifies for rated accuracy.</li>
+        </ul>
+      </div>
+      <div class="prose">
+        <h3 style="margin-top:0">Equipment and method</h3>
+        <ul>
+          <li>Confirm the sensor's accuracy near the top and bottom of the column, and correct its zero offset (about −0.2 in on the 1/8 in runs).</li>
+          <li>Define one consistent run start and fill every trial to the same height, especially for the 3/16 in orifice.</li>
+          <li>Measure each orifice's diameter and edge condition precisely; the plate thickness relative to the 1/8 in hole may make it behave more like a short nozzle.</li>
+          <li>Watch for vortexing at low water levels.</li>
+          <li>Run more repeats per suite to tighten the drain-time standard deviations.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="references" aria-labelledby="ref-h">
+    <h2 id="ref-h"><span class="sec-num">08</span> References</h2>
+    <ol class="refs">
+      <li>Alvaro-Berlanga, D., R. Planet, and A. Fernandez-Nieves. "Torricelli's Experiment and Conservation of Momentum." <em>American Journal of Physics</em> 92, no. 7 (2024): 493–97. <a href="https://doi.org/10.1119/5.0145991">https://doi.org/10.1119/5.0145991</a>.</li>
+      <li>de Nevers, Noel, and Geoffrey D. Silcox. <em>Fluid Mechanics for Chemical Engineers</em>. McGraw-Hill Education, 2021.</li>
+      <li>Halpern, Joshua. "52.4: Torricelli's Theorem." <em>Physics LibreTexts</em>, August 8, 2024. <a href="https://phys.libretexts.org/Courses/Prince_Georges_Community_College/General_Physics_I%3A_Classical_Mechanics/52%3A_Fluid_Dynamics/52.04%3A_Torricellis_Theorem">https://phys.libretexts.org/Courses/Prince_Georges_Community_College/General_Physics_I%3A_Classical_Mechanics/52%3A_Fluid_Dynamics/52.04%3A_Torricellis_Theorem</a>.</li>
+    </ol>
+    <h3>Equipment documentation</h3>
+    <ul class="refs" style="list-style:disc">
+      <li>University of Utah, Department of Chemical Engineering. "Torricelli Column: Standard Operating Procedure." Projects Lab handout. Source of the apparatus photo (Figure 1), procedure and safety rules.</li>
+      <li>ifm electronic. "UGT507 Ultrasonic Sensor." Product data sheet, February 1, 2016. Source of the sensing range and specifications in Table 1.</li>
+      <li>Opto 22. "SNAP PAC R-Series Controllers." Data sheet, Form 1594. Controller and data logger.</li>
+    </ul>
+
+    <nav class="pager" aria-label="Pages">
+      <a href="data.html"><small>Previous</small>← Data &amp; Experiment</a>
+      <a class="next" href="attachments.html"><small>Next</small>Attachments →</a>
+    </nav>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span><strong>Team Wed-3:</strong> Samantha Sharp, Conlin Patch, Daniel Heycke</span>
+    <span>Fluid Mechanics Experiment 1 · Dept. of Chemical Engineering, University of Utah</span>
+    <span>October 3, 2026</span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

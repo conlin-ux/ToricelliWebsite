@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Theory | Torricelli's Law | Team Wed-3</title>
+  <meta name="description" content="Derivation of Torricelli's law from Bernoulli's equation, continuity, the quasi-steady falling-head drain model, and the team's pre-lab answers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='7' y='3' width='12' height='26' rx='2' fill='%23fff' stroke='%23cc0000' stroke-width='2'/%3E%3Crect x='8' y='11' width='10' height='17' fill='%23cc0000' opacity='.3'/%3E%3Cpath d='M19 26 q7 0 9 5' fill='none' stroke='%23cc0000' stroke-width='2.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="3" width="12" height="26" rx="2" fill="#fff" stroke="#cc0000" stroke-width="2"/><rect x="8" y="11" width="10" height="17" fill="#cc0000" opacity=".22"/><path d="M19 26 q7 0 9 5" fill="none" stroke="#cc0000" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span class="brand-text"><span class="brand-title">Torricelli's Law</span><span class="brand-sub">Team Wed-3 · Fluid Mechanics Experiment 1</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="theory.html" aria-current="page">Theory</a></li>
+        <li><a href="data.html">Data &amp; Experiment</a></li>
+        <li><a href="conclusions.html">Conclusions</a></li>
+        <li><a href="attachments.html">Attachments</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <header class="page-head">
+    <p class="eyebrow">Theory</p>
+    <h1>From Bernoulli to Torricelli</h1>
+    <p class="lede">A step-by-step derivation of the exit velocity, the continuity relation we use to measure it, and the quasi-steady drain model that gives our predicted h(t) and drain times.</p>
+    <ul class="toc">
+      <li><a href="#setup">Problem setup</a></li>
+      <li><a href="#bernoulli">Bernoulli → Torricelli</a></li>
+      <li><a href="#continuity">Continuity</a></li>
+      <li><a href="#drain">Drain model</a></li>
+      <li><a href="#quasi">Quasi-steady check</a></li>
+      <li><a href="#predictions">Ideal predictions</a></li>
+      <li><a href="#prelab">Pre-lab questions</a></li>
+    </ul>
+  </header>
+
+  <section class="card" id="setup" aria-labelledby="setup-h">
+    <h2 id="setup-h"><span class="sec-num">01</span> Problem setup</h2>
+    <div class="grid-2-wide">
+      <div class="prose">
+        <p>We apply Bernoulli's equation along a streamline from <strong>point 1</strong>, the free surface in the column, to <strong>point 2</strong>, the jet just outside the orifice (Figure 2). The height <strong>h</strong> is measured from the orifice centerline up to the free surface. Both points are open to the atmosphere.</p>
+        <p>The column has inner diameter D₁ = 2.625 in. Two orifices were tested, D₂ = 1/8 in and 3/16 in. Table 2 lists the resulting areas; the area ratio A₁/A₂ = (D₁/D₂)² sets how fast the surface falls relative to the jet.</p>
+        <div class="table-wrap">
+          <table>
+            <caption><strong>Table 2.</strong> Column and orifice geometry.</caption>
+            <thead><tr><th>Quantity</th><th class="num">1/8 in orifice</th><th class="num">3/16 in orifice</th></tr></thead>
+            <tbody>
+              <tr><td>Orifice diameter, D₂</td><td class="num">0.125 in</td><td class="num">0.1875 in</td></tr>
+              <tr><td>Orifice area, A₂</td><td class="num">0.01227 in²</td><td class="num">0.02761 in²</td></tr>
+              <tr><td>Column area, A₁ (D₁ = 2.625 in)</td><td class="num">5.412 in²</td><td class="num">5.412 in²</td></tr>
+              <tr><td>Area ratio, A₁/A₂ = (D₁/D₂)²</td><td class="num key">441.0 (= 21²)</td><td class="num key">196.0 (= 14²)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <figure id="fig2">
+        <div class="fig-frame" style="padding:.5rem">
+          <svg viewBox="0 0 360 420" role="img" aria-labelledby="fig2-t" style="width:100%;height:auto;font-family:Inter,system-ui,sans-serif">
+            <title id="fig2-t">Schematic of a water column of diameter D1 draining through a bottom orifice of diameter D2. Point 1 is the free surface and point 2 is the jet exit; both are at atmospheric pressure. Height h is measured from the orifice centerline to the free surface.</title>
+            <defs>
+              <marker id="ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#3d434b"/></marker>
+              <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#cc0000"/></marker>
+              <linearGradient id="water" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#cfe3f7"/><stop offset="1" stop-color="#a9cdf0"/></linearGradient>
+            </defs>
+            <!-- water -->
+            <rect x="92" y="120" width="136" height="220" fill="url(#water)"/>
+            <!-- surface ripple -->
+            <path d="M92 120 q17 -5 34 0 t34 0 t34 0 t34 0" fill="none" stroke="#1f5fa8" stroke-width="2"/>
+            <!-- column walls -->
+            <path d="M90 40 V344 H158 M162 344 H230 V40" fill="none" stroke="#16191d" stroke-width="4" stroke-linejoin="round"/>
+            <!-- flange -->
+            <rect x="80" y="344" width="160" height="10" fill="#c4cad2" stroke="#16191d" stroke-width="1.5"/>
+            <rect x="155" y="344" width="10" height="10" fill="url(#water)"/>
+            <!-- jet -->
+            <path d="M157 354 C 157 380, 158 400, 159 418 M163 354 C 163 380, 162 400, 161 418" fill="none" stroke="#1f5fa8" stroke-width="2"/>
+            <rect x="158.5" y="354" width="3" height="64" fill="#a9cdf0"/>
+            <!-- centerline -->
+            <line x1="40" y1="349" x2="300" y2="349" stroke="#5f6873" stroke-dasharray="5 4" stroke-width="1"/>
+            <text x="300" y="345" font-size="10.5" fill="#5f6873" text-anchor="end">orifice centerline (z = 0)</text>
+            <!-- h dimension -->
+            <line x1="56" y1="120" x2="88" y2="120" stroke="#3d434b" stroke-width="1"/>
+            <line x1="62" y1="124" x2="62" y2="345" stroke="#3d434b" stroke-width="1.5" marker-start="url(#ar)" marker-end="url(#ar)"/>
+            <text x="52" y="240" font-size="17" font-style="italic" font-weight="600" fill="#16191d" text-anchor="end">h</text>
+            <!-- D1 dimension -->
+            <line x1="94" y1="28" x2="226" y2="28" stroke="#3d434b" stroke-width="1.5" marker-start="url(#ar)" marker-end="url(#ar)"/>
+            <line x1="90" y1="22" x2="90" y2="38" stroke="#3d434b"/><line x1="230" y1="22" x2="230" y2="38" stroke="#3d434b"/>
+            <text x="160" y="20" font-size="13" fill="#16191d" text-anchor="middle" font-weight="600">D₁ = 2.625 in</text>
+            <!-- point 1 -->
+            <circle cx="160" cy="120" r="5" fill="#cc0000" stroke="#fff" stroke-width="1.5"/>
+            <text x="170" y="112" font-size="13" font-weight="700" fill="#cc0000">1</text>
+            <text x="244" y="104" font-size="12" fill="#16191d">P₁ = P<tspan font-size="9" dy="3">atm</tspan></text>
+            <line x1="200" y1="150" x2="200" y2="185" stroke="#cc0000" stroke-width="2" marker-end="url(#arr)"/>
+            <text x="206" y="172" font-size="12" fill="#cc0000" font-style="italic">v₁</text>
+            <text x="244" y="124" font-size="11" fill="#5f6873">free surface</text>
+            <!-- point 2 -->
+            <circle cx="160" cy="366" r="5" fill="#cc0000" stroke="#fff" stroke-width="1.5"/>
+            <text x="148" y="374" font-size="13" font-weight="700" fill="#cc0000" text-anchor="end">2</text>
+            <line x1="176" y1="370" x2="176" y2="405" stroke="#cc0000" stroke-width="2" marker-end="url(#arr)"/>
+            <text x="182" y="395" font-size="12" fill="#cc0000" font-style="italic">v₂</text>
+            <text x="244" y="380" font-size="12" fill="#16191d">P₂ = P<tspan font-size="9" dy="3">atm</tspan></text>
+            <text x="244" y="398" font-size="11" fill="#5f6873">free jet</text>
+            <!-- D2 label -->
+            <line x1="120" y1="368" x2="154" y2="352" stroke="#3d434b" stroke-width="1"/>
+            <text x="116" y="382" font-size="12" fill="#16191d" text-anchor="end" font-weight="600">D₂</text>
+            <text x="116" y="396" font-size="10.5" fill="#5f6873" text-anchor="end">1/8 or 3/16 in</text>
+          </svg>
+        </div>
+        <figcaption><strong>Figure 2.</strong> Schematic of the tank-draining problem. Point 1 is the free surface and point 2 is the orifice exit; both are at atmospheric pressure. h is measured from the orifice centerline. (Not to scale.)</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="card" id="bernoulli" aria-labelledby="bern-h">
+    <h2 id="bern-h"><span class="sec-num">02</span> Bernoulli's equation → Torricelli's law</h2>
+    <p class="prose">We start from the head form of Bernoulli's equation between points 1 and 2 (de Nevers and Silcox 2021), where Δ means (point 2) − (point 1):</p>
+    <div class="eq"><div class="eq-body">$$\Delta\left(\frac{P}{\rho g} + z + \frac{v^2}{2g}\right) = \frac{dW_{n.f.}}{g\,dm} - \frac{\mathfrak{F}}{g}$$</div><span class="eq-num">(1)</span></div>
+    <p class="prose">Here \(dW_{n.f.}/dm\) is non-flow (shaft) work per unit mass and \(\mathfrak{F}\) is friction heating per unit mass. We apply the assumptions one at a time:</p>
+    <ol class="steps prose">
+      <li><strong>Incompressible, quasi-steady flow.</strong> Water density is constant, and the flow at each instant is treated as steady (justified in <a href="#quasi">Section 05</a>), so Eq. 1 holds at every moment of the drain.</li>
+      <li><strong>No shaft work.</strong> The pump is off (0 % power) during draining, so \(dW_{n.f.}/dm = 0\).</li>
+      <li><strong>Frictionless orifice.</strong> Friction and vena-contracta losses are neglected: \(\mathfrak{F} = 0\).</li>
+      <li><strong>Equal pressures.</strong> The column top is open and the jet discharges to air, so \(P_1 = P_2 = P_{atm}\) and the pressure term vanishes.</li>
+      <li><strong>Datum at the orifice centerline.</strong> \(z_2 = 0\) and \(z_1 = h\), so \(z_2 - z_1 = -h\).</li>
+    </ol>
+    <p class="prose">With these, Eq. 1 reduces to</p>
+    <div class="eq"><div class="eq-body">$$-h + \frac{v_2^2 - v_1^2}{2g} = 0 \quad\Longrightarrow\quad v_2^2 - v_1^2 = 2gh$$</div><span class="eq-num">(1a)</span></div>
+    <p class="prose">Continuity (Eq. 3 below) gives \(v_1 = (A_2/A_1)\,v_2\), so</p>
+    <div class="eq"><div class="eq-body">$$v_2 = \sqrt{\frac{2gh}{1-(A_2/A_1)^2}}$$</div><span class="eq-num">(1b)</span></div>
+    <p class="prose"><strong>Negligible column velocity.</strong> For our rig, \((v_1/v_2)^2 = (A_2/A_1)^2 \approx 5.1\times10^{-6}\) for the 1/8 in orifice and \(2.6\times10^{-5}\) for the 3/16 in orifice. The denominator in Eq. 1b is 1 to better than 0.003 %, so we drop it and obtain <strong>Torricelli's law</strong>:</p>
+    <div class="eq key-eq"><div class="eq-body">$$v_2 = \sqrt{2gh}$$</div><span class="eq-num">(2)</span></div>
+    <p class="prose">This is the speed a body reaches falling freely through height h, and it does not depend on the orifice size. The same result, with the same assumptions, is derived in open-access form by Halpern (2024).</p>
+    <div class="panel note-blue">
+      <h3 style="margin-top:0">Units note</h3>
+      <p>We work in inches throughout. With h in <strong>in</strong> and g = 32.174 ft/s² × 12 = <strong>386.1 in/s²</strong>, Eq. 2 gives v₂ directly in <strong>in/s</strong>, the unit used in our velocity plots. The conversion factor g<sub>c</sub> = 32.174 lbm·ft/(lbf·s²) is only needed when pressure terms are written in lbf; because P₁ = P₂ = P<sub>atm</sub>, those terms cancel and g<sub>c</sub> drops out of Torricelli's law.</p>
+    </div>
+  </section>
+
+  <section class="card" id="continuity" aria-labelledby="cont-h">
+    <h2 id="cont-h"><span class="sec-num">03</span> Continuity: measuring the exit velocity</h2>
+    <p class="prose">The ultrasonic sensor measures only the water level, so we cannot see v₂ directly. Mass conservation links the jet to the falling surface. For an incompressible fluid,</p>
+    <div class="eq"><div class="eq-body">$$\rho A_1 v_1 = \rho A_2 v_2, \qquad v_1 = -\frac{dh}{dt}$$</div><span class="eq-num">(3)</span></div>
+    <p class="prose">so the experimental exit velocity follows from the measured slope of h(t):</p>
+    <div class="eq key-eq"><div class="eq-body">$$v_{2,\text{exp}} = \frac{A_1}{A_2}\left(-\frac{dh}{dt}\right)$$</div><span class="eq-num">(4)</span></div>
+    <p class="prose">Because A₁/A₂ is 441 (1/8 in) or 196 (3/16 in), any error in dh/dt is multiplied by several hundred. We therefore compute dh/dt with a centered 5-point running (local linear-fit) derivative of the logged data, not by differentiating a fitted curve; see <a href="data.html#processing">Data &amp; Experiment</a>.</p>
+  </section>
+
+  <section class="card" id="drain" aria-labelledby="drain-h">
+    <h2 id="drain-h"><span class="sec-num">04</span> Falling-head (quasi-steady) drain model</h2>
+    <p class="prose">Substituting Torricelli's law (Eq. 2) into continuity (Eq. 3) gives a differential equation for the water level. We include a discharge coefficient C<sub>d</sub> to show where real losses would enter; ideal theory has <strong>C<sub>d</sub> = 1</strong>:</p>
+    <div class="eq"><div class="eq-body">$$A_1\frac{dh}{dt} = -C_d A_2\sqrt{2gh}$$</div><span class="eq-num">(5)</span></div>
+    <p class="prose">Separating variables and integrating from h₀ at t = 0:</p>
+    <div class="eq"><div class="eq-body">$$\begin{aligned}\int_{h_0}^{h}\frac{dh}{\sqrt{h}} &= -C_d\frac{A_2}{A_1}\sqrt{2g}\int_0^t dt\\[4pt] \Longrightarrow\quad \sqrt{h} &= \sqrt{h_0} - C_d\frac{A_2}{A_1}\sqrt{\frac{g}{2}}\,t\end{aligned}$$</div><span class="eq-num">(6)</span></div>
+    <p class="prose">so √h falls linearly with time and h(t) is a parabola:</p>
+    <div class="eq key-eq"><div class="eq-body">$$h(t) = \left(\sqrt{h_0} - C_d\frac{A_2}{A_1}\sqrt{\frac{g}{2}}\,t\right)^2$$</div><span class="eq-num">(7)</span></div>
+    <p class="prose">Setting h = h<sub>f</sub> gives the time to drain from h₀ to h<sub>f</sub>:</p>
+    <div class="eq key-eq"><div class="eq-body">$$t_{\text{drain}} = \frac{A_1}{C_d A_2}\sqrt{\frac{2}{g}}\left(\sqrt{h_0}-\sqrt{h_f}\right)$$</div><span class="eq-num">(8)</span></div>
+    <p class="prose">Eq. 7 with C<sub>d</sub> = 1 is the dashed "Theoretical" curve on our height plots, and Eq. 2 evaluated along it is the dashed line on our velocity plots. Eq. 8 with h<sub>f</sub> = 0 gives our theoretical drain times. In a real orifice, friction and the contraction of the jet just downstream of the hole (the vena contracta) make C<sub>d</sub> &lt; 1, so real orifices pass less flow than the ideal model predicts. We use C<sub>d</sub> only as a concept when discussing our results; we do not report a numerical value.</p>
+  </section>
+
+  <section class="card" id="quasi" aria-labelledby="quasi-h">
+    <h2 id="quasi-h"><span class="sec-num">05</span> Is the quasi-steady assumption justified?</h2>
+    <p class="prose">Bernoulli's equation in the form of Eq. 1 is for steady flow, but our level falls continuously. The approximation is acceptable if the jet speed changes slowly compared with gravitational acceleration. Differentiating Eq. 2 and using \(dh/dt = -(A_2/A_1)\,v_2\):</p>
+    <div class="eq"><div class="eq-body">$$\frac{dv_2}{dt} = \frac{\sqrt{2g}}{2\sqrt{h}}\frac{dh}{dt} = \frac{g}{v_2}\left(-\frac{A_2}{A_1}v_2\right) = -g\,\frac{A_2}{A_1}$$</div><span class="eq-num">(9)</span></div>
+    <p class="prose">The jet decelerates at a constant rate, which is why the theoretical velocity lines on our plots are straight.</p>
+    <div class="stats">
+      <div class="stat"><div class="label">1/8 in orifice</div><div class="value">0.875 <span class="unit">in/s²</span></div><div class="sub">= 386.1 / 441</div></div>
+      <div class="stat"><div class="label">3/16 in orifice</div><div class="value">1.97 <span class="unit">in/s²</span></div><div class="sub">= 386.1 / 196</div></div>
+      <div class="stat"><div class="label">Gravity, g</div><div class="value">386.1 <span class="unit">in/s²</span></div><div class="sub">for comparison</div></div>
+    </div>
+    <p class="prose">Both deceleration rates are less than 0.6 % of g, so the unsteady term is negligible and applying Torricelli's law at each instant is reasonable.</p>
+  </section>
+
+  <section class="card" id="predictions" aria-labelledby="pred-h">
+    <h2 id="pred-h"><span class="sec-num">06</span> Ideal predictions</h2>
+    <p class="prose">These model predictions (C<sub>d</sub> = 1, g = 386.1 in/s²) are the "simulation" we compare our measurements against on the <a href="data.html">Data &amp; Experiment</a> page. By Eq. 2 the start velocity depends only on h₀, so it is the same for both orifices.</p>
+    <div class="table-wrap" style="max-width:520px">
+      <table>
+        <caption><strong>Table 3.</strong> Ideal exit velocity from Eq. 2.</caption>
+        <thead><tr><th>Height, h</th><th class="num">Ideal v₂ (in/s)</th></tr></thead>
+        <tbody>
+          <tr><td>h₀ = 18 in (start)</td><td class="num">117.9</td></tr>
+          <tr><td>h₀ = 22 in (start)</td><td class="num">130.3</td></tr>
+          <tr><td>h₀ = 27 in (start)</td><td class="num">144.4</td></tr>
+          <tr><td>h = 1 in (near end)</td><td class="num">27.8</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="prose">Theoretical drain times from Eq. 8 are listed next to the measured values in <a href="data.html#drain-times">Table 5</a>.</p>
+  </section>
+
+  <section class="card" id="prelab" aria-labelledby="prelab-h">
+    <h2 id="prelab-h"><span class="sec-num">07</span> Pre-lab questions</h2>
+    <p class="prose">Our answers from the pre-lab meeting. The <a href="conclusions.html#prelab-check">Conclusions</a> compare them with what we measured.</p>
+
+    <details class="qa">
+      <summary><span class="q-num">Q1</span> What are the safety considerations for this experiment?</summary>
+      <div class="qa-body">
+        <ul>
+          <li>Wear safety glasses, long pants and closed-toe shoes in the lab.</li>
+          <li>Secure the column, tubing and orifice flange before filling. Tighten the flange bolts fully so the column doesn't leak.</li>
+          <li>Don't overfill the column. Stop the pump (0 % power) once the target height is reached.</li>
+          <li>Take care when swapping orifice flanges; the column must be empty to avoid spray.</li>
+          <li>Keep water away from power outlets, the electronics box and the computer.</li>
+          <li>Wipe up spills promptly to prevent slips.</li>
+          <li>Never leave the equipment running unattended, and send only pure water down the drain (Torricelli SOP).</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary><span class="q-num">Q2</span> Starting from Bernoulli's equation, what assumptions give Torricelli's law?</summary>
+      <div class="qa-body">
+        <p>Starting from Bernoulli's equation between the free surface (1) and the orifice exit (2):</p>
+        $$\frac{P_1}{\rho}+\frac{v_1^2}{2}+gz_1=\frac{P_2}{\rho}+\frac{v_2^2}{2}+gz_2$$
+        <p>Assumptions:</p>
+        <ol>
+          <li>Steady (quasi-steady) and incompressible flow.</li>
+          <li>No pump, turbine or other shaft work.</li>
+          <li>Frictionless orifice (no friction losses).</li>
+          <li>\(P_1 = P_2 = P_{atm}\): the column is open to the atmosphere and the jet discharges to the atmosphere.</li>
+          <li>\(v_1 \approx 0\): the column area is much larger than the orifice area, so the surface falls slowly.</li>
+          <li>Datum at the orifice centerline: \(z_2 = 0\), \(z_1 = h\).</li>
+        </ol>
+        <p>The equation then reduces to \(gh = \tfrac{1}{2}v_2^2\), so</p>
+        $$v_2=\sqrt{2gh}\quad\text{(Torricelli's law)}$$
+        <p>The exit velocity is then linked to the falling surface by mass conservation: \((\rho A v)_1 = (\rho A v)_2 \Rightarrow v_2 = A_1 v_1 / A_2\).</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary><span class="q-num">Q3</span> Would different pipe (column) diameters affect the speed or drain time of the fluid leaving through the orifice? In theory? In reality?</summary>
+      <div class="qa-body">
+        <p><strong>In theory:</strong> since \(v_2=\sqrt{2gh}\), the exit velocity at any given height is the same regardless of column diameter. The column diameter does control how fast h falls (\(dh/dt = -(A_2/A_1)v_2\)). A narrower column drains faster, so its exit velocity drops off sooner. A wider column takes longer to drain.</p>
+        <p><strong>In reality:</strong> friction, turbulence and vena-contracta effects make the actual exit velocity lower than the ideal value, so measured results won't match exactly.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary><span class="q-num">Q4</span> Based on Eq. 2, how does the orifice size change the speed of the flow?</summary>
+      <div class="qa-body">
+        <p>Orifice diameter does not appear in \(v_2=\sqrt{2gh}\), so ideally the exit <em>velocity</em> at a given height doesn't depend on orifice size. The <em>volumetric flow rate</em> \(Q = A_2 v_2\) is higher for a larger orifice, so the column drains faster. Drain time scales as \(1/A_2\), so the 3/16 in orifice should drain \((3/16 \div 1/8)^2 = 2.25\times\) faster than the 1/8 in orifice. In reality, losses can differ between orifice sizes, so the measured velocities may not be identical.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary><span class="q-num">Q5</span> What is your plan to complete the experiment?</summary>
+      <div class="qa-body">
+        <p>Install the first orifice (1/8 in) and run draining tests from 18, 22 and 27 in, with four trials at each height. Then swap to the second orifice (3/16 in) and repeat, for 24 runs in total. Log h(t) with the ultrasonic sensor, then calculate experimental exit velocities from continuity and compare them, and the drain times, with Torricelli's predictions.</p>
+      </div>
+    </details>
+
+    <nav class="pager" aria-label="Pages">
+      <a href="index.html"><small>Previous</small>← Home</a>
+      <a class="next" href="data.html"><small>Next</small>Data &amp; Experiment →</a>
+    </nav>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span><strong>Team Wed-3:</strong> Samantha Sharp, Conlin Patch, Daniel Heycke</span>
+    <span>Fluid Mechanics Experiment 1 · Dept. of Chemical Engineering, University of Utah</span>
+    <span>October 3, 2026</span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

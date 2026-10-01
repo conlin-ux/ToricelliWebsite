@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Torricelli's Law | Team Wed-3</title>
+  <meta name="description" content="Fluid Mechanics Experiment 1, Team Wed-3: draining a water column through 1/8 in and 3/16 in orifices to test Torricelli's law.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='7' y='3' width='12' height='26' rx='2' fill='%23fff' stroke='%23cc0000' stroke-width='2'/%3E%3Crect x='8' y='11' width='10' height='17' fill='%23cc0000' opacity='.3'/%3E%3Cpath d='M19 26 q7 0 9 5' fill='none' stroke='%23cc0000' stroke-width='2.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="3" width="12" height="26" rx="2" fill="#fff" stroke="#cc0000" stroke-width="2"/><rect x="8" y="11" width="10" height="17" fill="#cc0000" opacity=".22"/><path d="M19 26 q7 0 9 5" fill="none" stroke="#cc0000" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span class="brand-text"><span class="brand-title">Torricelli's Law</span><span class="brand-sub">Team Wed-3 · Fluid Mechanics Experiment 1</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="theory.html">Theory</a></li>
+        <li><a href="data.html">Data &amp; Experiment</a></li>
+        <li><a href="conclusions.html">Conclusions</a></li>
+        <li><a href="attachments.html">Attachments</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="title">
+    <p class="eyebrow">Fluid Mechanics · Experiment 1</p>
+    <h1 id="title">Torricelli's Law: Draining a Column Through an Orifice</h1>
+    <dl class="meta-row">
+      <div class="meta"><dt>Group</dt><dd>Wed-3</dd></div>
+      <div class="meta"><dt>Members</dt><dd>Samantha Sharp, Conlin Patch, Daniel Heycke</dd></div>
+      <div class="meta"><dt>Date</dt><dd>October 3, 2026</dd></div>
+      <div class="meta"><dt>Department</dt><dd>Chemical Engineering, University of Utah</dd></div>
+    </dl>
+  </section>
+
+  <section class="card" id="introduction" aria-labelledby="intro-h">
+    <h2 id="intro-h"><span class="sec-num">01</span> Introduction</h2>
+    <p class="intro-text">Torricelli's law predicts that water leaving an orifice at depth h exits at v = √(2gh), the same speed as an object falling freely from that height. We test this by draining a water column through 1/8 in and 3/16 in orifices while an ultrasonic sensor tracks the falling water level in real time.</p>
+
+    <figure id="fig1">
+      <div class="labeled fig-frame">
+        <img src="images/apparatus_photo.jpg" width="1200" height="1077"
+             alt="Photo of the Torricelli column apparatus: a tall clear acrylic column with an inch scale inside an aluminum frame, an ultrasonic sensor at the top, an orifice flange and electronics box near the bottom of the column, a pump in a white water bucket beneath it, and a computer monitor running the Opto22 display on the bench to the right.">
+        <span class="callout" style="left:26%;top:5%;--len:70px"><span class="dot"></span><span class="line"></span><span class="tag"><b>1</b>Ultrasonic level sensor</span></span>
+        <span class="callout" style="left:26.5%;top:28%;--len:90px"><span class="dot"></span><span class="line"></span><span class="tag"><b>2</b>Acrylic column (inch scale)</span></span>
+        <span class="callout" style="left:34%;top:62%;--len:70px"><span class="dot"></span><span class="line"></span><span class="tag"><b>3</b>Power switch</span></span>
+        <span class="callout" style="left:25.5%;top:69.5%;--len:120px"><span class="dot"></span><span class="line"></span><span class="tag"><b>4</b>Orifice flange</span></span>
+        <span class="callout" style="left:27.5%;top:81%;--len:100px"><span class="dot"></span><span class="line"></span><span class="tag"><b>5</b>Pump (submerged)</span></span>
+        <span class="callout" style="left:20%;top:88%;--len:150px"><span class="dot"></span><span class="line"></span><span class="tag"><b>6</b>Water bucket</span></span>
+        <span class="callout" style="left:57%;top:66%;--len:40px"><span class="dot"></span><span class="line"></span><span class="tag"><b>7</b>Opto22 display</span></span>
+      </div>
+      <ol class="label-key">
+        <li>Ultrasonic level sensor</li><li>Acrylic column</li><li>Power switch</li><li>Orifice flange</li>
+        <li>Pump</li><li>Water bucket</li><li>Opto22 display</li>
+      </ol>
+      <figcaption><strong>Figure 1.</strong> The Torricelli column. The pump (5) refills the column (2) from the bucket (6); with the pump off, water drains through the orifice in the bottom flange (4) while the ultrasonic sensor (1) measures the water level and the Opto22 system (7) logs it every second. Photo adapted from the lab Standard Operating Procedure (Torricelli SOP); labels added by Team Wed-3.</figcaption>
+    </figure>
+  </section>
+
+  <section class="card" id="measurement" aria-labelledby="meas-h">
+    <h2 id="meas-h"><span class="sec-num">02</span> What we measured</h2>
+    <div class="grid-2-wide">
+      <div class="prose">
+        <p>The measured physical property is the <strong>liquid level (height, h)</strong> of water in the column, recorded against time. The ifm UGT507 ultrasonic sensor at the top of the column sends a 230 kHz pulse downward and times its echo off the water surface; the Opto22 system converts the sensor's 4–20 mA output into height above the orifice centerline. Exit velocities are derived from h(t) (see <a href="data.html#processing">Data &amp; Experiment</a>).</p>
+        <p>The sensor measures the distance from its face to the water, so its range is a distance range. The column is about 34 in tall, so the 47.2 in maximum covers the whole column; the only restriction is the 3.15 in blind zone just below the sensor face (Table 1).</p>
+      </div>
+      <div>
+        <div class="stats" style="margin-top:0">
+          <div class="stat"><div class="label">Sensing range, min</div><div class="value">3.15 <span class="unit">in</span></div><div class="sub">80 mm, datasheet</div></div>
+          <div class="stat"><div class="label">Sensing range, max</div><div class="value">47.2 <span class="unit">in</span></div><div class="sub">1200 mm, datasheet</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption><strong>Table 1.</strong> Measurement specifications of the ifm UGT507 ultrasonic level sensor (ifm electronic, UGT507 datasheet).</caption>
+        <thead><tr><th>Specification</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Sensing range (sensor face to water surface)</td><td class="key">3.15 in (min) to 47.2 in (max) &nbsp;<span class="muted">(80–1200 mm)</span></td></tr>
+          <tr><td>Blind zone</td><td>3.15 in</td></tr>
+          <tr><td>Linearity error of analog output</td><td>&lt; 1 %</td></tr>
+          <tr><td>Hysteresis</td><td>&lt; 1 %</td></tr>
+          <tr><td>Beam angle</td><td>8° (±2°)</td></tr>
+          <tr><td>Output</td><td>4–20 mA analog, temperature compensated; rated accuracy after a 20 min warm-up</td></tr>
+          <tr><td>Logging interval (Opto22 system)</td><td>about 1 s</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="glance-h">
+    <h2 id="glance-h"><span class="sec-num">03</span> At a glance</h2>
+    <div class="stats">
+      <div class="stat"><div class="label">Runs</div><div class="value">24</div><div class="sub">2 orifices × 3 heights × 4 trials</div></div>
+      <div class="stat"><div class="label">Start heights</div><div class="value">18, 22, 27 <span class="unit">in</span></div><div class="sub">above orifice centerline</div></div>
+      <div class="stat"><div class="label">Height R², 1/8 in</div><div class="value">≥ 0.998</div><div class="sub">vs. ideal Torricelli model</div></div>
+      <div class="stat"><div class="label">Height R², 3/16 in</div><div class="value">0.94–0.95</div><div class="sub">vs. ideal Torricelli model</div></div>
+    </div>
+    <p>Verdict: <strong>effective, with caveats.</strong> Torricelli's law described the 1/8 in orifice very well and the 3/16 in orifice reasonably well. Read the full assessment in the <a href="conclusions.html">Conclusions</a>.</p>
+    <nav class="pager" aria-label="Pages">
+      <a href="theory.html"><small>Next</small>Theory &amp; derivation →</a>
+      <a class="next" href="data.html"><small>Results</small>Data &amp; Experiment →</a>
+    </nav>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span><strong>Team Wed-3:</strong> Samantha Sharp, Conlin Patch, Daniel Heycke</span>
+    <span>Fluid Mechanics Experiment 1 · Dept. of Chemical Engineering, University of Utah</span>
+    <span>October 3, 2026</span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

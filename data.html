@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data &amp; Experiment | Torricelli's Law | Team Wed-3</title>
+  <meta name="description" content="Procedure, data processing, measured height and exit velocity versus Torricelli's law, drain times and error analysis for 24 draining runs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\(',right:'\\)',display:false}]});"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='7' y='3' width='12' height='26' rx='2' fill='%23fff' stroke='%23cc0000' stroke-width='2'/%3E%3Crect x='8' y='11' width='10' height='17' fill='%23cc0000' opacity='.3'/%3E%3Cpath d='M19 26 q7 0 9 5' fill='none' stroke='%23cc0000' stroke-width='2.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="3" width="12" height="26" rx="2" fill="#fff" stroke="#cc0000" stroke-width="2"/><rect x="8" y="11" width="10" height="17" fill="#cc0000" opacity=".22"/><path d="M19 26 q7 0 9 5" fill="none" stroke="#cc0000" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span class="brand-text"><span class="brand-title">Torricelli's Law</span><span class="brand-sub">Team Wed-3 · Fluid Mechanics Experiment 1</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="theory.html">Theory</a></li>
+        <li><a href="data.html" aria-current="page">Data &amp; Experiment</a></li>
+        <li><a href="conclusions.html">Conclusions</a></li>
+        <li><a href="attachments.html">Attachments</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <header class="page-head">
+    <p class="eyebrow">Data &amp; Experiment</p>
+    <h1>What we did and what we measured</h1>
+    <p class="lede">Twenty-four draining runs, two orifices and three starting heights, compared run by run against the ideal Torricelli model.</p>
+    <ul class="toc">
+      <li><a href="#data">The data</a></li>
+      <li><a href="#procedure">Procedure</a></li>
+      <li><a href="#processing">Data processing</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#drain-times">Drain times</a></li>
+      <li><a href="#discussion">Discussion</a></li>
+    </ul>
+  </header>
+
+  <section class="card" id="data" aria-labelledby="data-h">
+    <h2 id="data-h"><span class="sec-num">01</span> The data</h2>
+    <div class="grid-2-wide">
+      <div class="prose">
+        <p>We drained the column from three starting heights (<strong>18, 22 and 27 in</strong> above the orifice centerline) through two orifices (<strong>1/8 in and 3/16 in</strong>), with four repeat trials of each combination. That gives six measurement suites and 24 runs. The 1/8 in runs were recorded on September 2, 2026 and the 3/16 in runs on September 16, 2026.</p>
+        <p>For every run, the Opto22 system logged the ultrasonic liquid-level reading (in) about once per second, together with pump power and other channels not used here. The raw files, the file-format notes and our analysis notebook are on the <a href="attachments.html#downloads">Attachments</a> page.</p>
+        <p>The only "simulation" in this experiment is the ideal model from the <a href="theory.html">Theory</a> page: Torricelli's law (Eq. 2) combined with continuity (Eq. 3) gives a predicted h(t) (Eq. 7), v₂(t) and drain time (Eq. 8) for each suite. Every result below is a comparison of measurement against that model.</p>
+      </div>
+      <div class="stats" style="grid-template-columns:1fr 1fr;margin-top:0">
+        <div class="stat"><div class="label">Suites</div><div class="value">6</div><div class="sub">2 orifices × 3 heights</div></div>
+        <div class="stat"><div class="label">Runs</div><div class="value">24</div><div class="sub">4 trials per suite</div></div>
+        <div class="stat"><div class="label">Sampling</div><div class="value">≈ 1 <span class="unit">s</span></div><div class="sub">Opto22 logger</div></div>
+        <div class="stat"><div class="label">Area ratio</div><div class="value">441 / 196</div><div class="sub">1/8 in / 3/16 in</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="procedure" aria-labelledby="proc-h">
+    <h2 id="proc-h"><span class="sec-num">02</span> Apparatus and procedure</h2>
+    <div class="grid-2">
+      <div class="prose">
+        <h3 style="margin-top:0">Apparatus</h3>
+        <ul>
+          <li><strong>Acrylic column</strong>, about 34 in tall with an inch scale, inner diameter 2.625 in.</li>
+          <li><strong>Interchangeable bottom flanges</strong>, each with a circular orifice (1/8 in or 3/16 in), swapped by unbolting the flange.</li>
+          <li><strong>Rule Slimline submersible pump</strong> in the bucket under the column, which refills the column through tubing to the top.</li>
+          <li><strong>ifm UGT507 ultrasonic level sensor</strong> at the top of the column (range 3.15–47.2 in; <a href="index.html#measurement">Table 1</a>).</li>
+          <li><strong>Opto22 control system</strong> (SNAP PAC R-Series controller), which sets pump power and logs liquid level about every 1 s.</li>
+        </ul>
+        <p class="small muted">See the labeled photo in <a href="index.html#fig1">Figure 1</a>.</p>
+        <h3>Safety</h3>
+        <ul>
+          <li>Safety glasses at all times; never leave the equipment running unattended; only pure water down the drains (Torricelli SOP).</li>
+          <li>Water was kept away from the electronics box and computer, the flange bolts were fully tightened to prevent leaks, and spills were wiped up to avoid slips.</li>
+        </ul>
+      </div>
+      <div class="prose">
+        <h3 style="margin-top:0">Procedure</h3>
+        <ol class="steps">
+          <li>Checked that the bucket was full, then switched on the system (green switch on the electronics box).</li>
+          <li>Filled the column by entering a pump power on the Opto22 interface until the level reached the target height: 18, 22 or 27 in above the orifice centerline.</li>
+          <li>Set the pump to 0 %. The column drained freely through the orifice while the ultrasonic sensor logged h about every 1 s.</li>
+          <li>Repeated each height 4 times for each of the 2 orifices (2 × 3 × 4 = 24 runs).</li>
+          <li>Changed orifices by unbolting and swapping the bottom flange.</li>
+          <li>Saved the data files to a flash drive after each trial.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="panel note">
+      <h3 style="margin-top:0">Lab-day observations</h3>
+      <p>We observed that the logged height lagged behind the actual water level. Because we stopped recording when the column appeared empty, the last few seconds of some runs were not captured. These truncated runs explain the drain times marked ᵃ in <a href="#drain-times">Table 5</a>, and they feed into the discussion and <a href="conclusions.html#improvements">recommended improvements</a>.</p>
+    </div>
+  </section>
+
+  <section class="card" id="processing" aria-labelledby="procd-h">
+    <h2 id="procd-h"><span class="sec-num">03</span> Data processing</h2>
+    <p class="prose">All processing was done in our Python notebook (pandas, NumPy, matplotlib), available on the <a href="attachments.html#downloads">Attachments</a> page.</p>
+    <div class="grid-2">
+      <div class="prose">
+        <h3 style="margin-top:0">Run start</h3>
+        <p>Each run starts (t = 0) when the height first drops 0.05 in below the median of its first 5 readings. This aligns the four trials of a suite on a common time axis.</p>
+        <h3>Exit velocity: centered 5-point running derivative</h3>
+        <p>Following our supervisor's recommendation, velocities come directly from the logged data, not from differentiating a fitted curve. At each data point, a straight line h = m·t + b is fitted by least squares to a <strong>centered 5-point window</strong> (the point plus 2 on each side, about 5 s of data), and the slope m is taken as dh/dt. The exit velocity then follows from continuity (Eq. 4):</p>
+        <div class="eq"><div class="eq-body">$$v_{2,\text{exp}} = -\frac{A_1}{A_2}\,m$$</div><span class="eq-num">(10)</span></div>
+        <p>The first and last 2 points of each run have no velocity value. We use a local fit rather than a simple point-to-point difference because A₁/A₂ = 441 (1/8 in) and 196 (3/16 in): a single small step in the height reading would otherwise produce a velocity spike several hundred times larger.</p>
+      </div>
+      <div class="prose">
+        <h3 style="margin-top:0">Agreement metric: R² against theory</h3>
+        <p>Following our supervisor's second recommendation, we quantify agreement with the coefficient of determination R² rather than error bars on the continuous curves. For each trial i, R² is computed against the theoretical curve, and the four values are averaged:</p>
+        <div class="eq"><div class="eq-body">$$R^2_i = 1 - \frac{\sum (y_{\text{meas}} - y_{\text{theory}})^2}{\sum (y_{\text{meas}} - \bar{y}_{\text{meas}})^2}, \qquad \overline{R^2} = \frac{1}{4}\sum_{i=1}^{4} R^2_i$$</div><span class="eq-num">(11)</span></div>
+        <p>Here y is h (height plots) or v₂ (velocity plots). The theoretical curve starts from the mean actual start height of the four trials, and only points with t ≤ T<sub>end</sub> = 2(A₁/A₂)√h₀ / √(2g), while the theory is still draining, are included. Because it compares data with theory, R² = 1 means perfect agreement with Torricelli's law.</p>
+        <h3>Drain time</h3>
+        <p>The measured drain time is the time to empty to about 0 in, taken as the first reading at or below <strong>0.1 in</strong>, because the sensor rarely reads exactly 0.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="results" aria-labelledby="res-h">
+    <h2 id="res-h"><span class="sec-num">04</span> Results: measured vs. ideal model</h2>
+    <p class="prose">Choose a suite to see its height and velocity graphs (Figure 3). Each plot overlays all four trials with the dashed ideal Torricelli curve and gives the average R² against theory, calculated per trial and averaged (Eq. 11). There are no error bars on these continuous time series; the R² value is the measure of agreement.</p>
+
+    <div id="graph-selector">
+      <div class="selector" role="group" aria-label="Choose a measurement suite">
+        <div>
+          <div class="btn-group-label" id="lbl-orifice">Orifice</div>
+          <div class="btn-group" data-prop="orifice" role="group" aria-labelledby="lbl-orifice">
+            <button type="button" data-value="1-8" aria-pressed="true">1/8 in</button>
+            <button type="button" data-value="3-16" aria-pressed="false">3/16 in</button>
+          </div>
+        </div>
+        <div>
+          <div class="btn-group-label" id="lbl-height">Starting height</div>
+          <div class="btn-group" data-prop="height" role="group" aria-labelledby="lbl-height">
+            <button type="button" data-value="18" aria-pressed="false">18 in</button>
+            <button type="button" data-value="22" aria-pressed="false">22 in</button>
+            <button type="button" data-value="27" aria-pressed="true">27 in</button>
+          </div>
+        </div>
+      </div>
+
+      <figure id="fig3" style="margin-top:0">
+        <div class="graph-pair">
+          <figure>
+            <a class="zoom" id="sel-height-link" href="images/graphs/height_27in_1-8.png" data-caption="Figure 3a. Liquid height vs. time for the selected suite.">
+              <img id="sel-height-img" src="images/graphs/height_27in_1-8.png" width="1800" height="1350" alt="Liquid height (in) versus time (s) for all four trials of the 27 in start height, 1/8 in orifice suite, with the dashed ideal Torricelli curve. Average R² = 0.9982.">
+            </a>
+            <div class="sub-cap">(a) Liquid height h (in) vs. time (s)</div>
+          </figure>
+          <figure>
+            <a class="zoom" id="sel-velocity-link" href="images/graphs/velocity_27in_1-8.png" data-caption="Figure 3b. Exit velocity vs. time for the selected suite.">
+              <img id="sel-velocity-img" src="images/graphs/velocity_27in_1-8.png" width="1800" height="1350" alt="Exit velocity v2 (in/s) versus time (s) for all four trials of the 27 in start height, 1/8 in orifice suite, with the dashed ideal Torricelli line. Average R² = 0.9420.">
+            </a>
+            <div class="sub-cap">(b) Exit velocity v₂ (in/s) vs. time (s)</div>
+          </figure>
+        </div>
+        <figcaption id="sel-caption" aria-live="polite"><strong>Figure 3.</strong> Measured (Trials 1–4) and theoretical (dashed) results for the <strong>27 in start height, 1/8 in orifice</strong> suite. (a) Liquid height vs. time, average R² = <b>0.9982</b>. (b) Exit velocity v₂ vs. time, average R² = <b>0.9420</b>. All 12 graphs are also on the <a href="attachments.html#graphs">Attachments</a> page.</figcaption>
+      </figure>
+    </div>
+
+    <div class="grid-2" style="margin-top:1.4rem">
+      <div>
+        <div class="table-wrap" style="margin-top:0">
+          <table id="table4">
+            <caption><strong>Table 4.</strong> Average R² of measured data against the ideal Torricelli model (n = 4 trials per suite).</caption>
+            <thead><tr><th>Suite</th><th class="num">R², height</th><th class="num">R², velocity</th></tr></thead>
+            <tbody>
+              <tr><td>18 in, 1/8 in</td><td class="num key">0.9989</td><td class="num">0.9211</td></tr>
+              <tr><td>22 in, 1/8 in</td><td class="num key">0.9984</td><td class="num">0.9251</td></tr>
+              <tr><td>27 in, 1/8 in</td><td class="num key">0.9982</td><td class="num">0.9420</td></tr>
+              <tr><td>18 in, 3/16 in</td><td class="num">0.9548</td><td class="num">0.7433</td></tr>
+              <tr><td>22 in, 3/16 in</td><td class="num">0.9486</td><td class="num">0.7648</td></tr>
+              <tr><td>27 in, 3/16 in</td><td class="num">0.9444</td><td class="num">0.7227</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="prose">
+        <h3 style="margin-top:0">Reading the R² values</h3>
+        <p>The 1/8 in orifice matches theory almost exactly in height (R² ≥ 0.998) and well in velocity (R² 0.92–0.94). The 3/16 in orifice departs more from the ideal model: R² falls to 0.94–0.95 for height and 0.72–0.76 for velocity. Velocity R² is always lower than height R² because differentiating the data amplifies small reading steps, while the height signal itself is smooth.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="drain-times" aria-labelledby="dt-h">
+    <h2 id="dt-h"><span class="sec-num">05</span> Drain time: calculated vs. measured</h2>
+    <p class="prose">Table 5 and Figure 4 compare the measured drain times with the ideal model (Eq. 8). Together with the height graphs in Figure 3(a), which show measured and theoretical drainage over each whole run, it gives our calculated-versus-measured comparison. Measured values are the mean ± sample standard deviation of the four trials.</p>
+    <div class="table-wrap">
+      <table id="table5">
+        <caption><strong>Table 5.</strong> Theoretical and measured drain times (n = 4 trials per suite; SD is the sample standard deviation).</caption>
+        <thead><tr><th>Orifice</th><th class="num">h₀ (in)</th><th class="num">Theoretical t<sub>drain</sub> (s)</th><th class="num">Measured t<sub>drain</sub>, mean ± SD (s)</th><th class="num">% difference</th></tr></thead>
+        <tbody>
+          <tr><td>1/8 in</td><td class="num">18</td><td class="num">134.7</td><td class="num key">118.4 ± 1.3<sup>a</sup></td><td class="num">−12.1 %</td></tr>
+          <tr><td>1/8 in</td><td class="num">22</td><td class="num">149.2</td><td class="num key">134.2 ± 0.5</td><td class="num">−10.1 %</td></tr>
+          <tr><td>1/8 in</td><td class="num">27</td><td class="num">165.4</td><td class="num key">149.8 ± 1.3</td><td class="num">−9.4 %</td></tr>
+          <tr><td>3/16 in</td><td class="num">18</td><td class="num">59.3</td><td class="num key">57.0 ± 3.0<sup>a</sup></td><td class="num">−3.9 %</td></tr>
+          <tr><td>3/16 in</td><td class="num">22</td><td class="num">64.3</td><td class="num key">61.2 ± 2.5</td><td class="num">−4.8 %</td></tr>
+          <tr><td>3/16 in</td><td class="num">27</td><td class="num">73.6</td><td class="num key">69.9 ± 3.7<sup>a</sup></td><td class="num">−5.0 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-foot">
+      <p><strong>Definitions.</strong> Measured drain time: time from the run start (first reading 0.05 in below the median of the first 5 readings) to the first reading at or below 0.1 in. Theoretical drain time: Eq. 8 with C<sub>d</sub> = 1, h<sub>f</sub> = 0 and h₀ equal to the mean actual start height of the four trials. % difference = (mean − theoretical) / theoretical.</p>
+      <p><sup>a</sup> Includes trials in which logging stopped before the column fully drained (we stopped recording when the column appeared empty, but the logger lagged behind real time), or the reading levelled off above the threshold. The time of the last recorded point was used, so the true mean drain time is slightly longer.</p>
+    </div>
+    <figure id="fig4" class="chart-fig">
+      <div class="chart-legend"><span><i class="sw sw-theory"></i>Theoretical (Eq. 8, C<sub>d</sub> = 1)</span><span><i class="sw sw-meas"></i>Measured, mean ± SD (n = 4)</span></div>
+      <div class="fig-frame chart-wrap">
+<svg class="chart" viewBox="0 0 720 380" role="img" aria-labelledby="fig4-t fig4-d">
+<title id="fig4-t">Drain time by suite: theoretical vs. measured mean ± SD</title>
+<desc id="fig4-d">Grouped bar chart. For each of six suites, a gray bar shows the theoretical drain time and a red bar shows the measured mean drain time with an error bar of ± one sample standard deviation (n = 4). Values are listed in the drain-time table.</desc>
+<line class="axis" x1="58" x2="708" y1="310.0" y2="310.0"/>
+<text class="tick" x="50" y="314.0" text-anchor="end">0</text>
+<line class="grid" x1="58" x2="708" y1="264.0" y2="264.0"/>
+<text class="tick" x="50" y="268.0" text-anchor="end">30</text>
+<line class="grid" x1="58" x2="708" y1="218.0" y2="218.0"/>
+<text class="tick" x="50" y="222.0" text-anchor="end">60</text>
+<line class="grid" x1="58" x2="708" y1="172.0" y2="172.0"/>
+<text class="tick" x="50" y="176.0" text-anchor="end">90</text>
+<line class="grid" x1="58" x2="708" y1="126.0" y2="126.0"/>
+<text class="tick" x="50" y="130.0" text-anchor="end">120</text>
+<line class="grid" x1="58" x2="708" y1="80.0" y2="80.0"/>
+<text class="tick" x="50" y="84.0" text-anchor="end">150</text>
+<line class="grid" x1="58" x2="708" y1="34.0" y2="34.0"/>
+<text class="tick" x="50" y="38.0" text-anchor="end">180</text>
+<text class="axis-title" transform="translate(16 172) rotate(-90)" text-anchor="middle">Drain time (s)</text>
+<path class="bar-theory" d="M80.2,310 V107.5 Q80.2,103.5 84.2,103.5 H106.2 Q110.2,103.5 110.2,107.5 V310 Z" data-tip="18 in, 1/8 in: theoretical 134.7 s" tabindex="0"><title>18 in, 1/8 in: theoretical 134.7 s</title></path>
+<path class="bar-meas" d="M114.2,310 V132.5 Q114.2,128.5 118.2,128.5 H140.2 Q144.2,128.5 144.2,132.5 V310 Z" data-tip="18 in, 1/8 in: measured 118.4 ± 1.3 s (−12.1 %)" tabindex="0"><title>18 in, 1/8 in: measured 118.4 ± 1.3 s (−12.1 %)</title></path>
+<line class="err" x1="129.2" x2="129.2" y1="126.5" y2="130.4"/>
+<line class="err" x1="123.2" x2="135.2" y1="126.5" y2="126.5"/>
+<line class="err" x1="123.2" x2="135.2" y1="130.4" y2="130.4"/>
+<text class="pct" x="112.2" y="95.5" text-anchor="middle">−12.1 %ᵃ</text>
+<text class="tick" x="112.2" y="328" text-anchor="middle">18 in</text>
+<path class="bar-theory" d="M188.5,310 V85.2 Q188.5,81.2 192.5,81.2 H214.5 Q218.5,81.2 218.5,85.2 V310 Z" data-tip="22 in, 1/8 in: theoretical 149.2 s" tabindex="0"><title>22 in, 1/8 in: theoretical 149.2 s</title></path>
+<path class="bar-meas" d="M222.5,310 V108.2 Q222.5,104.2 226.5,104.2 H248.5 Q252.5,104.2 252.5,108.2 V310 Z" data-tip="22 in, 1/8 in: measured 134.2 ± 0.5 s (−10.1 %)" tabindex="0"><title>22 in, 1/8 in: measured 134.2 ± 0.5 s (−10.1 %)</title></path>
+<line class="err" x1="237.5" x2="237.5" y1="103.5" y2="105.0"/>
+<line class="err" x1="231.5" x2="243.5" y1="103.5" y2="103.5"/>
+<line class="err" x1="231.5" x2="243.5" y1="105.0" y2="105.0"/>
+<text class="pct" x="220.5" y="73.2" text-anchor="middle">−10.1 %</text>
+<text class="tick" x="220.5" y="328" text-anchor="middle">22 in</text>
+<path class="bar-theory" d="M296.8,310 V60.4 Q296.8,56.4 300.8,56.4 H322.8 Q326.8,56.4 326.8,60.4 V310 Z" data-tip="27 in, 1/8 in: theoretical 165.4 s" tabindex="0"><title>27 in, 1/8 in: theoretical 165.4 s</title></path>
+<path class="bar-meas" d="M330.8,310 V84.3 Q330.8,80.3 334.8,80.3 H356.8 Q360.8,80.3 360.8,84.3 V310 Z" data-tip="27 in, 1/8 in: measured 149.8 ± 1.3 s (−9.4 %)" tabindex="0"><title>27 in, 1/8 in: measured 149.8 ± 1.3 s (−9.4 %)</title></path>
+<line class="err" x1="345.8" x2="345.8" y1="78.3" y2="82.3"/>
+<line class="err" x1="339.8" x2="351.8" y1="78.3" y2="78.3"/>
+<line class="err" x1="339.8" x2="351.8" y1="82.3" y2="82.3"/>
+<text class="pct" x="328.8" y="48.4" text-anchor="middle">−9.4 %</text>
+<text class="tick" x="328.8" y="328" text-anchor="middle">27 in</text>
+<path class="bar-theory" d="M405.2,310 V223.1 Q405.2,219.1 409.2,219.1 H431.2 Q435.2,219.1 435.2,223.1 V310 Z" data-tip="18 in, 3/16 in: theoretical 59.3 s" tabindex="0"><title>18 in, 3/16 in: theoretical 59.3 s</title></path>
+<path class="bar-meas" d="M439.2,310 V226.6 Q439.2,222.6 443.2,222.6 H465.2 Q469.2,222.6 469.2,226.6 V310 Z" data-tip="18 in, 3/16 in: measured 57.0 ± 3.0 s (−3.9 %)" tabindex="0"><title>18 in, 3/16 in: measured 57.0 ± 3.0 s (−3.9 %)</title></path>
+<line class="err" x1="454.2" x2="454.2" y1="218.0" y2="227.2"/>
+<line class="err" x1="448.2" x2="460.2" y1="218.0" y2="218.0"/>
+<line class="err" x1="448.2" x2="460.2" y1="227.2" y2="227.2"/>
+<text class="pct" x="437.2" y="210.0" text-anchor="middle">−3.9 %ᵃ</text>
+<text class="tick" x="437.2" y="328" text-anchor="middle">18 in</text>
+<path class="bar-theory" d="M513.5,310 V215.4 Q513.5,211.4 517.5,211.4 H539.5 Q543.5,211.4 543.5,215.4 V310 Z" data-tip="22 in, 3/16 in: theoretical 64.3 s" tabindex="0"><title>22 in, 3/16 in: theoretical 64.3 s</title></path>
+<path class="bar-meas" d="M547.5,310 V220.2 Q547.5,216.2 551.5,216.2 H573.5 Q577.5,216.2 577.5,220.2 V310 Z" data-tip="22 in, 3/16 in: measured 61.2 ± 2.5 s (−4.8 %)" tabindex="0"><title>22 in, 3/16 in: measured 61.2 ± 2.5 s (−4.8 %)</title></path>
+<line class="err" x1="562.5" x2="562.5" y1="212.3" y2="220.0"/>
+<line class="err" x1="556.5" x2="568.5" y1="212.3" y2="212.3"/>
+<line class="err" x1="556.5" x2="568.5" y1="220.0" y2="220.0"/>
+<text class="pct" x="545.5" y="203.4" text-anchor="middle">−4.8 %</text>
+<text class="tick" x="545.5" y="328" text-anchor="middle">22 in</text>
+<path class="bar-theory" d="M621.8,310 V201.1 Q621.8,197.1 625.8,197.1 H647.8 Q651.8,197.1 651.8,201.1 V310 Z" data-tip="27 in, 3/16 in: theoretical 73.6 s" tabindex="0"><title>27 in, 3/16 in: theoretical 73.6 s</title></path>
+<path class="bar-meas" d="M655.8,310 V206.8 Q655.8,202.8 659.8,202.8 H681.8 Q685.8,202.8 685.8,206.8 V310 Z" data-tip="27 in, 3/16 in: measured 69.9 ± 3.7 s (−5.0 %)" tabindex="0"><title>27 in, 3/16 in: measured 69.9 ± 3.7 s (−5.0 %)</title></path>
+<line class="err" x1="670.8" x2="670.8" y1="197.1" y2="208.5"/>
+<line class="err" x1="664.8" x2="676.8" y1="197.1" y2="197.1"/>
+<line class="err" x1="664.8" x2="676.8" y1="208.5" y2="208.5"/>
+<text class="pct" x="653.8" y="189.1" text-anchor="middle">−5.0 %ᵃ</text>
+<text class="tick" x="653.8" y="328" text-anchor="middle">27 in</text>
+<path class="bracket" d="M68.0,338 v6 H373.0 v-6"/>
+<text class="group" x="220.5" y="362" text-anchor="middle">1/8 in orifice</text>
+<path class="bracket" d="M393.0,338 v6 H698.0 v-6"/>
+<text class="group" x="545.5" y="362" text-anchor="middle">3/16 in orifice</text>
+</svg>
+      </div>
+      <figcaption><strong>Figure 4.</strong> Theoretical and measured drain times for the six suites. Error bars show ± one sample standard deviation of the four trials; labels above each pair give the % difference from theory. <sup>a</sup> Includes low-estimate trials (see the note under Table 5). Hover over or tab to a bar for its value.</figcaption>
+    </figure>
+    <div class="panel note">
+      <h3 style="margin-top:0">Why the measured drain times are shorter than theoretical</h3>
+      <p>The theoretical times are calculated to a liquid height of exactly 0 in. The measured times stop at the first reading at or below 0.1 in, because the ultrasonic sensor rarely reads exactly 0 (the 1/8 in runs settle at about −0.2 in). In the ideal model the last 0.1 in drains very slowly and takes about 6–7.5 % of the total drain time at these starting heights (√(0.1 in)/√h₀ for h₀ = 18–27 in, from Eq. 8). So much of the gap comes from this difference in end points, not from the flow itself. Means marked <sup>a</sup> also include runs that stopped logging before the column emptied, which shortens those times further.</p>
+    </div>
+  </section>
+
+  <section class="card" id="discussion" aria-labelledby="disc-h">
+    <h2 id="disc-h"><span class="sec-num">06</span> Discussion of results</h2>
+
+    <h3 style="margin-top:0">1/8 in orifice: close to ideal</h3>
+    <p class="prose">For all three starting heights, the measured h(t) lies almost on top of the ideal parabola (Eq. 7), and the four trials are nearly indistinguishable. The column empties in roughly 120–150 s depending on height. Near the very end, the readings reach zero a few seconds before the theoretical curve and then settle at about −0.2 in, which suggests a small zero offset in the sensor. The same offset means the 0.1 in reading is reached slightly before the true level gets there, which adds to the drain-time gap in Table 5.</p>
+
+    <h3>3/16 in orifice: slower than ideal</h3>
+    <p class="prose">The measured h(t) sits <strong>above</strong> the theoretical curve for most of each run (Figure 3a with 3/16 in selected), so this orifice drains more slowly than the ideal model predicts. This is the behavior expected when losses are present: friction and jet contraction at the orifice (the C<sub>d</sub> &lt; 1 concept on the <a href="theory.html#drain">Theory</a> page) reduce the flow below √(2gh)·A₂. The 3/16 in trials also started farther from the nominal heights (about 17.1–18.1 in for the 18 in suite and 25.4–27.2 in for the 27 in suite) than the 1/8 in trials, which started close to nominal. The theory curve starts from the mean of the four start heights, so this spread also lowers R².</p>
+
+    <h3>Exit velocity at the start and near the end of each run</h3>
+    <div class="prose">
+      <p>The ideal start velocities are 117.9, 130.3 and 144.4 in/s for h₀ = 18, 22 and 27 in (<a href="theory.html#predictions">Table 3</a>). Reading the velocity graphs (Figure 3b):</p>
+      <ul>
+        <li><strong>1/8 in, start:</strong> the first velocity values (about 2 s into the run, since the 5-point window has no value for the first 2 points) scatter around, and mostly slightly below, the theoretical line. For the 27 in suite they fall between roughly 115 and 140 in/s against a theoretical 144 in/s.</li>
+        <li><strong>1/8 in, near the end:</strong> the measured velocity follows the theoretical line down to about 20–30 in/s (the ideal value at h = 1 in is 27.8 in/s) and then drops to zero as the column empties.</li>
+        <li><strong>3/16 in, start:</strong> measured v₂ is clearly <strong>below</strong> theory. For the 18 in suite the first values are about 80–105 in/s against a theoretical value of about 113 in/s at that time.</li>
+        <li><strong>3/16 in, near the end:</strong> measured v₂ is <strong>above</strong> the theoretical line, and the traces stop at about 20 in/s instead of reaching zero because the ends of these runs were not captured.</li>
+      </ul>
+      <p>The 3/16 in pattern follows from the slower drainage. Theory and measurement are compared at equal <em>times</em>, not equal heights. Because the real column drains more slowly, at late times it still holds more water than the model predicts, so its jet is faster than the model's jet, which is approaching zero. Early losses and later "excess" velocity are two views of the same reduced flow rate.</p>
+    </div>
+
+    <h3>Velocity noise and the running-average window</h3>
+    <p class="prose">The 1/8 in velocity traces are much noisier than the 3/16 in traces even though the height data look smoother. The height readings change in small steps, and at 1 s sampling each step produces a jump in the local slope. Continuity multiplies that slope by A₁/A₂ = 441 for the 1/8 in orifice but only 196 for the 3/16 in orifice, so the same reading step becomes a velocity jump more than twice as large. The 5-point running derivative smooths this considerably; without it the velocity would be dominated by spikes.</p>
+
+    <h3>Comparison with the pre-lab predictions and the literature</h3>
+    <p class="prose">In the pre-lab we predicted that exit velocity at a given height would not depend on orifice size, and that real losses would make measured velocities lower than ideal. The 1/8 in orifice behaved almost ideally, while the 3/16 in orifice showed the expected losses, so the two orifices did not behave identically. The shape of every measured h(t) curve is the parabola predicted by the textbook falling-head analysis (de Nevers and Silcox 2021), and the ideal velocity relation matches the open-access derivation by Halpern (2024), which, like our model, omits losses. The <a href="conclusions.html">Conclusions</a> compare these results with a published Torricelli experiment and with our pre-lab answers in more detail.</p>
+
+    <nav class="pager" aria-label="Pages">
+      <a href="theory.html"><small>Previous</small>← Theory</a>
+      <a class="next" href="conclusions.html"><small>Next</small>Conclusions →</a>
+    </nav>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span><strong>Team Wed-3:</strong> Samantha Sharp, Conlin Patch, Daniel Heycke</span>
+    <span>Fluid Mechanics Experiment 1 · Dept. of Chemical Engineering, University of Utah</span>
+    <span>October 3, 2026</span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

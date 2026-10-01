@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attachments | Torricelli's Law | Team Wed-3</title>
+  <meta name="description" content="All 12 height and velocity plots, mean ± SD drain-time table, R² table, raw data files and the analysis notebook.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='7' y='3' width='12' height='26' rx='2' fill='%23fff' stroke='%23cc0000' stroke-width='2'/%3E%3Crect x='8' y='11' width='10' height='17' fill='%23cc0000' opacity='.3'/%3E%3Cpath d='M19 26 q7 0 9 5' fill='none' stroke='%23cc0000' stroke-width='2.4'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="3" width="12" height="26" rx="2" fill="#fff" stroke="#cc0000" stroke-width="2"/><rect x="8" y="11" width="10" height="17" fill="#cc0000" opacity=".22"/><path d="M19 26 q7 0 9 5" fill="none" stroke="#cc0000" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span class="brand-text"><span class="brand-title">Torricelli's Law</span><span class="brand-sub">Team Wed-3 · Fluid Mechanics Experiment 1</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="theory.html">Theory</a></li>
+        <li><a href="data.html">Data &amp; Experiment</a></li>
+        <li><a href="conclusions.html">Conclusions</a></li>
+        <li><a href="attachments.html" aria-current="page">Attachments</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <header class="page-head">
+    <p class="eyebrow">Attachments</p>
+    <h1>Plots, tables and files</h1>
+    <p class="lede">Every graph, the summary statistics, the raw data and our analysis notebook.</p>
+    <ul class="toc">
+      <li><a href="#graphs">All 12 graphs</a></li>
+      <li><a href="#tables">Mean ± SD and R² tables</a></li>
+      <li><a href="#downloads">Data &amp; scripts</a></li>
+    </ul>
+  </header>
+
+  <section class="card" id="graphs" aria-labelledby="g-h">
+    <h2 id="g-h"><span class="sec-num">A</span> Height and velocity plots</h2>
+    <div class="prose">
+      <p>Each plot shows all four trials of one suite with the dashed ideal Torricelli curve. Height plots give liquid height (in) against time (s); velocity plots give the exit velocity v₂ (in/s), calculated from a centered 5-point running derivative of h(t) and continuity (Eq. 10). The legend's average R² is calculated for each trial against the theoretical curve (starting from the mean actual start height, and only while t ≤ the theoretical drain time), then averaged over the four trials.</p>
+      <p class="small muted">Following our supervisor's recommendation, these continuous time series carry no standard error bars; agreement is quantified by R². Uncertainty in the discrete summary values (drain times) is given as mean ± SD in Table A1 and as error bars in Figure A13. Click any graph to enlarge it.</p>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-row">
+        <div class="row-head"><h3>18 in · 1/8 in</h3><div class="r2-chips"><span class="chip">h: <b>0.9989</b></span><span class="chip">v: <b>0.9211</b></span></div></div>
+        <figure><a class="zoom" href="images/graphs/height_18in_1-8.png" data-caption="Figure A1. Height vs. time, 18 in start height, 1/8 in orifice. Average R² = 0.9989."><img loading="lazy" src="images/graphs/height_18in_1-8.png" width="1803" height="1357" alt="Liquid height (in) versus time (s), 18 in start height, 1/8 in orifice, four trials with ideal curve; average R² 0.9989."></a><figcaption><strong>Figure A1.</strong> Height vs. time, 18 in, 1/8 in.</figcaption></figure>
+        <figure><a class="zoom" href="images/graphs/velocity_18in_1-8.png" data-caption="Figure A2. Exit velocity vs. time, 18 in start height, 1/8 in orifice. Average R² = 0.9211."><img loading="lazy" src="images/graphs/velocity_18in_1-8.png" width="1805" height="1357" alt="Exit velocity (in/s) versus time (s), 18 in start height, 1/8 in orifice, four trials with ideal line; average R² 0.9211."></a><figcaption><strong>Figure A2.</strong> Velocity vs. time, 18 in, 1/8 in.</figcaption></figure>
+      </div>
+      <div class="gallery-row">
+        <div class="row-head"><h3>22 in · 1/8 in</h3><div class="r2-chips"><span class="chip">h: <b>0.9984</b></span><span class="chip">v: <b>0.9251</b></span></div></div>
+        <figure><a class="zoom" href="images/graphs/height_22in_1-8.png" data-caption="Figure A3. Height vs. time, 22 in start height, 1/8 in orifice. Average R² = 0.9984."><img loading="lazy" src="images/graphs/height_22in_1-8.png" width="1763" height="1357" alt="Liquid height (in) versus time (s), 22 in start height, 1/8 in orifice, four trials with ideal curve; average R² 0.9984."></a><figcaption><strong>Figure A3.</strong> Height vs. time, 22 in, 1/8 in.</figcaption></figure>
+        <figure><a class="zoom" href="images/graphs/velocity_22in_1-8.png" data-caption="Figure A4. Exit velocity vs. time, 22 in start height, 1/8 in orifice. Average R² = 0.9251."><img loading="lazy" src="images/graphs/velocity_22in_1-8.png" width="1805" height="1357" alt="Exit velocity (in/s) versus time (s), 22 in start height, 1/8 in orifice, four trials with ideal line; average R² 0.9251."></a><figcaption><strong>Figure A4.</strong> Velocity vs. time, 22 in, 1/8 in.</figcaption></figure>
+      </div>
+      <div class="gallery-row">
+        <div class="row-head"><h3>27 in · 1/8 in</h3><div class="r2-chips"><span class="chip">h: <b>0.9982</b></span><span class="chip">v: <b>0.9420</b></span></div></div>
+        <figure><a class="zoom" href="images/graphs/height_27in_1-8.png" data-caption="Figure A5. Height vs. time, 27 in start height, 1/8 in orifice. Average R² = 0.9982."><img loading="lazy" src="images/graphs/height_27in_1-8.png" width="1763" height="1357" alt="Liquid height (in) versus time (s), 27 in start height, 1/8 in orifice, four trials with ideal curve; average R² 0.9982."></a><figcaption><strong>Figure A5.</strong> Height vs. time, 27 in, 1/8 in.</figcaption></figure>
+        <figure><a class="zoom" href="images/graphs/velocity_27in_1-8.png" data-caption="Figure A6. Exit velocity vs. time, 27 in start height, 1/8 in orifice. Average R² = 0.9420."><img loading="lazy" src="images/graphs/velocity_27in_1-8.png" width="1805" height="1357" alt="Exit velocity (in/s) versus time (s), 27 in start height, 1/8 in orifice, four trials with ideal line; average R² 0.9420."></a><figcaption><strong>Figure A6.</strong> Velocity vs. time, 27 in, 1/8 in.</figcaption></figure>
+      </div>
+      <div class="gallery-row">
+        <div class="row-head"><h3>18 in · 3/16 in</h3><div class="r2-chips"><span class="chip">h: <b>0.9548</b></span><span class="chip">v: <b>0.7433</b></span></div></div>
+        <figure><a class="zoom" href="images/graphs/height_18in_3-16.png" data-caption="Figure A7. Height vs. time, 18 in start height, 3/16 in orifice. Average R² = 0.9548."><img loading="lazy" src="images/graphs/height_18in_3-16.png" width="1819" height="1357" alt="Liquid height (in) versus time (s), 18 in start height, 3/16 in orifice, four trials with ideal curve; average R² 0.9548."></a><figcaption><strong>Figure A7.</strong> Height vs. time, 18 in, 3/16 in.</figcaption></figure>
+        <figure><a class="zoom" href="images/graphs/velocity_18in_3-16.png" data-caption="Figure A8. Exit velocity vs. time, 18 in start height, 3/16 in orifice. Average R² = 0.7433."><img loading="lazy" src="images/graphs/velocity_18in_3-16.png" width="1821" height="1357" alt="Exit velocity (in/s) versus time (s), 18 in start height, 3/16 in orifice, four trials with ideal line; average R² 0.7433."></a><figcaption><strong>Figure A8.</strong> Velocity vs. time, 18 in, 3/16 in.</figcaption></figure>
+      </div>
+      <div class="gallery-row">
+        <div class="row-head"><h3>22 in · 3/16 in</h3><div class="r2-chips"><span class="chip">h: <b>0.9486</b></span><span class="chip">v: <b>0.7648</b></span></div></div>
+        <figure><a class="zoom" href="images/graphs/height_22in_3-16.png" data-caption="Figure A9. Height vs. time, 22 in start height, 3/16 in orifice. Average R² = 0.9486."><img loading="lazy" src="images/graphs/height_22in_3-16.png" width="1779" height="1357" alt="Liquid height (in) versus time (s), 22 in start height, 3/16 in orifice, four trials with ideal curve; average R² 0.9486."></a><figcaption><strong>Figure A9.</strong> Height vs. time, 22 in, 3/16 in.</figcaption></figure>
+        <figure><a class="zoom" href="images/graphs/velocity_22in_3-16.png" data-caption="Figure A10. Exit velocity vs. time, 22 in start height, 3/16 in orifice. Average R² = 0.7648."><img loading="lazy" src="images/graphs/velocity_22in_3-16.png" width="1821" height="1357" alt="Exit velocity (in/s) versus time (s), 22 in start height, 3/16 in orifice, four trials with ideal line; average R² 0.7648."></a><figcaption><strong>Figure A10.</strong> Velocity vs. time, 22 in, 3/16 in.</figcaption></figure>
+      </div>
+      <div class="gallery-row">
+        <div class="row-head"><h3>27 in · 3/16 in</h3><div class="r2-chips"><span class="chip">h: <b>0.9444</b></span><span class="chip">v: <b>0.7227</b></span></div></div>
+        <figure><a class="zoom" href="images/graphs/height_27in_3-16.png" data-caption="Figure A11. Height vs. time, 27 in start height, 3/16 in orifice. Average R² = 0.9444."><img loading="lazy" src="images/graphs/height_27in_3-16.png" width="1779" height="1357" alt="Liquid height (in) versus time (s), 27 in start height, 3/16 in orifice, four trials with ideal curve; average R² 0.9444."></a><figcaption><strong>Figure A11.</strong> Height vs. time, 27 in, 3/16 in.</figcaption></figure>
+        <figure><a class="zoom" href="images/graphs/velocity_27in_3-16.png" data-caption="Figure A12. Exit velocity vs. time, 27 in start height, 3/16 in orifice. Average R² = 0.7227."><img loading="lazy" src="images/graphs/velocity_27in_3-16.png" width="1821" height="1357" alt="Exit velocity (in/s) versus time (s), 27 in start height, 3/16 in orifice, four trials with ideal line; average R² 0.7227."></a><figcaption><strong>Figure A12.</strong> Velocity vs. time, 27 in, 3/16 in.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="tables" aria-labelledby="t-h">
+    <h2 id="t-h"><span class="sec-num">B</span> Summary tables</h2>
+    <div class="table-wrap">
+      <table>
+        <caption><strong>Table A1.</strong> Drain times: theoretical (Eq. 8, C<sub>d</sub> = 1) and measured mean ± sample SD (n = 4 per suite).</caption>
+        <thead><tr><th>Orifice</th><th class="num">h₀ (in)</th><th class="num">Theoretical t<sub>drain</sub> (s)</th><th class="num">Measured t<sub>drain</sub>, mean ± SD (s)</th><th class="num">% difference</th></tr></thead>
+        <tbody>
+          <tr><td>1/8 in</td><td class="num">18</td><td class="num">134.7</td><td class="num key">118.4 ± 1.3<sup>a</sup></td><td class="num">−12.1 %</td></tr>
+          <tr><td>1/8 in</td><td class="num">22</td><td class="num">149.2</td><td class="num key">134.2 ± 0.5</td><td class="num">−10.1 %</td></tr>
+          <tr><td>1/8 in</td><td class="num">27</td><td class="num">165.4</td><td class="num key">149.8 ± 1.3</td><td class="num">−9.4 %</td></tr>
+          <tr><td>3/16 in</td><td class="num">18</td><td class="num">59.3</td><td class="num key">57.0 ± 3.0<sup>a</sup></td><td class="num">−3.9 %</td></tr>
+          <tr><td>3/16 in</td><td class="num">22</td><td class="num">64.3</td><td class="num key">61.2 ± 2.5</td><td class="num">−4.8 %</td></tr>
+          <tr><td>3/16 in</td><td class="num">27</td><td class="num">73.6</td><td class="num key">69.9 ± 3.7<sup>a</sup></td><td class="num">−5.0 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-foot">
+      <p>Measured drain time = first reading at or below 0.1 in; theoretical drain time is to 0 in from the mean actual start height. See the <a href="data.html#drain-times">Data page</a> for why the measured times are shorter.</p>
+      <p><sup>a</sup> Includes trials in which logging stopped before the column fully drained (we stopped recording when the column appeared empty, but the logger lagged behind real time), or the reading levelled off above the threshold. The time of the last recorded point was used, so the true mean drain time is slightly longer.</p>
+    </div>
+
+    <figure id="figa13" class="chart-fig">
+      <div class="chart-legend"><span><i class="sw sw-theory"></i>Theoretical (Eq. 8, C<sub>d</sub> = 1)</span><span><i class="sw sw-meas"></i>Measured, mean ± SD (n = 4)</span></div>
+      <div class="fig-frame chart-wrap">
+<svg class="chart" viewBox="0 0 720 380" role="img" aria-labelledby="figa13-t figa13-d">
+<title id="figa13-t">Drain time by suite: theoretical vs. measured mean ± SD</title>
+<desc id="figa13-d">Grouped bar chart. For each of six suites, a gray bar shows the theoretical drain time and a red bar shows the measured mean drain time with an error bar of ± one sample standard deviation (n = 4). Values are listed in the drain-time table.</desc>
+<line class="axis" x1="58" x2="708" y1="310.0" y2="310.0"/>
+<text class="tick" x="50" y="314.0" text-anchor="end">0</text>
+<line class="grid" x1="58" x2="708" y1="264.0" y2="264.0"/>
+<text class="tick" x="50" y="268.0" text-anchor="end">30</text>
+<line class="grid" x1="58" x2="708" y1="218.0" y2="218.0"/>
+<text class="tick" x="50" y="222.0" text-anchor="end">60</text>
+<line class="grid" x1="58" x2="708" y1="172.0" y2="172.0"/>
+<text class="tick" x="50" y="176.0" text-anchor="end">90</text>
+<line class="grid" x1="58" x2="708" y1="126.0" y2="126.0"/>
+<text class="tick" x="50" y="130.0" text-anchor="end">120</text>
+<line class="grid" x1="58" x2="708" y1="80.0" y2="80.0"/>
+<text class="tick" x="50" y="84.0" text-anchor="end">150</text>
+<line class="grid" x1="58" x2="708" y1="34.0" y2="34.0"/>
+<text class="tick" x="50" y="38.0" text-anchor="end">180</text>
+<text class="axis-title" transform="translate(16 172) rotate(-90)" text-anchor="middle">Drain time (s)</text>
+<path class="bar-theory" d="M80.2,310 V107.5 Q80.2,103.5 84.2,103.5 H106.2 Q110.2,103.5 110.2,107.5 V310 Z" data-tip="18 in, 1/8 in: theoretical 134.7 s" tabindex="0"><title>18 in, 1/8 in: theoretical 134.7 s</title></path>
+<path class="bar-meas" d="M114.2,310 V132.5 Q114.2,128.5 118.2,128.5 H140.2 Q144.2,128.5 144.2,132.5 V310 Z" data-tip="18 in, 1/8 in: measured 118.4 ± 1.3 s (−12.1 %)" tabindex="0"><title>18 in, 1/8 in: measured 118.4 ± 1.3 s (−12.1 %)</title></path>
+<line class="err" x1="129.2" x2="129.2" y1="126.5" y2="130.4"/>
+<line class="err" x1="123.2" x2="135.2" y1="126.5" y2="126.5"/>
+<line class="err" x1="123.2" x2="135.2" y1="130.4" y2="130.4"/>
+<text class="pct" x="112.2" y="95.5" text-anchor="middle">−12.1 %ᵃ</text>
+<text class="tick" x="112.2" y="328" text-anchor="middle">18 in</text>
+<path class="bar-theory" d="M188.5,310 V85.2 Q188.5,81.2 192.5,81.2 H214.5 Q218.5,81.2 218.5,85.2 V310 Z" data-tip="22 in, 1/8 in: theoretical 149.2 s" tabindex="0"><title>22 in, 1/8 in: theoretical 149.2 s</title></path>
+<path class="bar-meas" d="M222.5,310 V108.2 Q222.5,104.2 226.5,104.2 H248.5 Q252.5,104.2 252.5,108.2 V310 Z" data-tip="22 in, 1/8 in: measured 134.2 ± 0.5 s (−10.1 %)" tabindex="0"><title>22 in, 1/8 in: measured 134.2 ± 0.5 s (−10.1 %)</title></path>
+<line class="err" x1="237.5" x2="237.5" y1="103.5" y2="105.0"/>
+<line class="err" x1="231.5" x2="243.5" y1="103.5" y2="103.5"/>
+<line class="err" x1="231.5" x2="243.5" y1="105.0" y2="105.0"/>
+<text class="pct" x="220.5" y="73.2" text-anchor="middle">−10.1 %</text>
+<text class="tick" x="220.5" y="328" text-anchor="middle">22 in</text>
+<path class="bar-theory" d="M296.8,310 V60.4 Q296.8,56.4 300.8,56.4 H322.8 Q326.8,56.4 326.8,60.4 V310 Z" data-tip="27 in, 1/8 in: theoretical 165.4 s" tabindex="0"><title>27 in, 1/8 in: theoretical 165.4 s</title></path>
+<path class="bar-meas" d="M330.8,310 V84.3 Q330.8,80.3 334.8,80.3 H356.8 Q360.8,80.3 360.8,84.3 V310 Z" data-tip="27 in, 1/8 in: measured 149.8 ± 1.3 s (−9.4 %)" tabindex="0"><title>27 in, 1/8 in: measured 149.8 ± 1.3 s (−9.4 %)</title></path>
+<line class="err" x1="345.8" x2="345.8" y1="78.3" y2="82.3"/>
+<line class="err" x1="339.8" x2="351.8" y1="78.3" y2="78.3"/>
+<line class="err" x1="339.8" x2="351.8" y1="82.3" y2="82.3"/>
+<text class="pct" x="328.8" y="48.4" text-anchor="middle">−9.4 %</text>
+<text class="tick" x="328.8" y="328" text-anchor="middle">27 in</text>
+<path class="bar-theory" d="M405.2,310 V223.1 Q405.2,219.1 409.2,219.1 H431.2 Q435.2,219.1 435.2,223.1 V310 Z" data-tip="18 in, 3/16 in: theoretical 59.3 s" tabindex="0"><title>18 in, 3/16 in: theoretical 59.3 s</title></path>
+<path class="bar-meas" d="M439.2,310 V226.6 Q439.2,222.6 443.2,222.6 H465.2 Q469.2,222.6 469.2,226.6 V310 Z" data-tip="18 in, 3/16 in: measured 57.0 ± 3.0 s (−3.9 %)" tabindex="0"><title>18 in, 3/16 in: measured 57.0 ± 3.0 s (−3.9 %)</title></path>
+<line class="err" x1="454.2" x2="454.2" y1="218.0" y2="227.2"/>
+<line class="err" x1="448.2" x2="460.2" y1="218.0" y2="218.0"/>
+<line class="err" x1="448.2" x2="460.2" y1="227.2" y2="227.2"/>
+<text class="pct" x="437.2" y="210.0" text-anchor="middle">−3.9 %ᵃ</text>
+<text class="tick" x="437.2" y="328" text-anchor="middle">18 in</text>
+<path class="bar-theory" d="M513.5,310 V215.4 Q513.5,211.4 517.5,211.4 H539.5 Q543.5,211.4 543.5,215.4 V310 Z" data-tip="22 in, 3/16 in: theoretical 64.3 s" tabindex="0"><title>22 in, 3/16 in: theoretical 64.3 s</title></path>
+<path class="bar-meas" d="M547.5,310 V220.2 Q547.5,216.2 551.5,216.2 H573.5 Q577.5,216.2 577.5,220.2 V310 Z" data-tip="22 in, 3/16 in: measured 61.2 ± 2.5 s (−4.8 %)" tabindex="0"><title>22 in, 3/16 in: measured 61.2 ± 2.5 s (−4.8 %)</title></path>
+<line class="err" x1="562.5" x2="562.5" y1="212.3" y2="220.0"/>
+<line class="err" x1="556.5" x2="568.5" y1="212.3" y2="212.3"/>
+<line class="err" x1="556.5" x2="568.5" y1="220.0" y2="220.0"/>
+<text class="pct" x="545.5" y="203.4" text-anchor="middle">−4.8 %</text>
+<text class="tick" x="545.5" y="328" text-anchor="middle">22 in</text>
+<path class="bar-theory" d="M621.8,310 V201.1 Q621.8,197.1 625.8,197.1 H647.8 Q651.8,197.1 651.8,201.1 V310 Z" data-tip="27 in, 3/16 in: theoretical 73.6 s" tabindex="0"><title>27 in, 3/16 in: theoretical 73.6 s</title></path>
+<path class="bar-meas" d="M655.8,310 V206.8 Q655.8,202.8 659.8,202.8 H681.8 Q685.8,202.8 685.8,206.8 V310 Z" data-tip="27 in, 3/16 in: measured 69.9 ± 3.7 s (−5.0 %)" tabindex="0"><title>27 in, 3/16 in: measured 69.9 ± 3.7 s (−5.0 %)</title></path>
+<line class="err" x1="670.8" x2="670.8" y1="197.1" y2="208.5"/>
+<line class="err" x1="664.8" x2="676.8" y1="197.1" y2="197.1"/>
+<line class="err" x1="664.8" x2="676.8" y1="208.5" y2="208.5"/>
+<text class="pct" x="653.8" y="189.1" text-anchor="middle">−5.0 %ᵃ</text>
+<text class="tick" x="653.8" y="328" text-anchor="middle">27 in</text>
+<path class="bracket" d="M68.0,338 v6 H373.0 v-6"/>
+<text class="group" x="220.5" y="362" text-anchor="middle">1/8 in orifice</text>
+<path class="bracket" d="M393.0,338 v6 H698.0 v-6"/>
+<text class="group" x="545.5" y="362" text-anchor="middle">3/16 in orifice</text>
+</svg>
+      </div>
+      <figcaption><strong>Figure A13.</strong> Theoretical and measured drain times (mean ± one sample SD, n = 4), with the % difference from theory above each pair. <sup>a</sup> Includes low-estimate trials (see Table A1 footnote).</figcaption>
+    </figure>
+    <div class="table-wrap" style="max-width:640px">
+      <table>
+        <caption><strong>Table A2.</strong> Regression error analysis: average R² of each suite against the ideal Torricelli model.</caption>
+        <thead><tr><th>Suite</th><th class="num">R², height</th><th class="num">R², velocity</th></tr></thead>
+        <tbody>
+          <tr><td>18 in, 1/8 in</td><td class="num">0.9989</td><td class="num">0.9211</td></tr>
+          <tr><td>22 in, 1/8 in</td><td class="num">0.9984</td><td class="num">0.9251</td></tr>
+          <tr><td>27 in, 1/8 in</td><td class="num">0.9982</td><td class="num">0.9420</td></tr>
+          <tr><td>18 in, 3/16 in</td><td class="num">0.9548</td><td class="num">0.7433</td></tr>
+          <tr><td>22 in, 3/16 in</td><td class="num">0.9486</td><td class="num">0.7648</td></tr>
+          <tr><td>27 in, 3/16 in</td><td class="num">0.9444</td><td class="num">0.7227</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card" id="downloads" aria-labelledby="d-h">
+    <h2 id="d-h"><span class="sec-num">C</span> Data files and analysis script</h2>
+    <div class="downloads">
+      <div class="dl">
+        <h3>Raw data: all 24 runs</h3>
+        <p><a class="btn" href="data/raw_data_all_runs.zip" download>↓ Download raw_data_all_runs.zip</a> <span class="filemeta">&nbsp;ZIP · 35 KB · 24 .H00 files</span></p>
+        <h4>File format</h4>
+        <ul class="small">
+          <li><strong>Names:</strong> <code>&lt;height in&gt; &lt;orifice&gt; &lt;trial #&gt; &lt;name&gt;.H00</code>. Example: <code>18 1-8 3 Alicia.H00</code> = 18 in initial height, 1/8 in orifice, trial 3. <code>3-16</code> = 3/16 in orifice. The trailing name is an arbitrary label and has no meaning.</li>
+          <li><strong>Encoding:</strong> comma-separated text, <strong>UTF-16</strong>, with a header row. Open with that encoding (e.g., Excel's Text Import Wizard: Delimited → Comma).</li>
+          <li><strong>Columns:</strong> Date, Time, Pump_Power, Liquid_Height_Ranging, PID_Input, PID_Setpoint, PID_Output, PID_P, PID_I, PID_D, Liquid_Height_Pressure.</li>
+          <li><strong>Time</strong> is <code>HH:MM:SS:cc</code> (last field = hundredths of a second); samples are about 1 s apart.</li>
+          <li><strong>Liquid_Height_Ranging</strong> is the ultrasonic level reading in inches, the measurement used in this experiment. Pump_Power (%) is 0 during draining. The PID columns and Liquid_Height_Pressure were not used.</li>
+          <li>1/8 in runs recorded September 2, 2026; 3/16 in runs recorded September 16, 2026.</li>
+        </ul>
+      </div>
+      <div class="dl">
+        <h3>Analysis notebook</h3>
+        <p><a class="btn" href="scripts/againtoricelli_plotting_rev2.ipynb" download>↓ Download againtoricelli_plotting_rev2.ipynb</a> <span class="filemeta">&nbsp;Jupyter · 175 KB</span></p>
+        <p class="small">Python (pandas, NumPy, matplotlib). Reads the UTF-16 .H00 files, aligns each run's start, computes the centered 5-point running derivative (<code>running_slope</code>), plots all four trials with the theoretical curve (<code>ana_height</code>; g = 386.09 in/s², D₁ = 2.625 in), computes R² against theory (<code>r2_vs_theory</code>) and prints each trial's drain time (first h ≤ 0.1 in).</p>
+        <h4>How to run</h4>
+        <ol class="small">
+          <li>Unzip the raw data and open the notebook in Jupyter (Python 3 with pandas, NumPy and matplotlib).</li>
+          <li>The notebook processes <strong>one suite at a time</strong>. Before each run, edit <code>folderpath</code>, <code>start_height</code>, <code>radius_nozzle</code> and the plot titles for that suite.</li>
+          <li><code>folderpath</code> points to our original folder layout (e.g., <code>toricelli data/1:8inchnozzle/27_inch_height</code>), not to the zip. Put the four files of a suite in one folder and point <code>folderpath</code> at it.</li>
+        </ol>
+      </div>
+    </div>
+
+    <nav class="pager" aria-label="Pages">
+      <a href="conclusions.html"><small>Previous</small>← Conclusions</a>
+      <a class="next" href="index.html"><small>Back to start</small>Home →</a>
+    </nav>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span><strong>Team Wed-3:</strong> Samantha Sharp, Conlin Patch, Daniel Heycke</span>
+    <span>Fluid Mechanics Experiment 1 · Dept. of Chemical Engineering, University of Utah</span>
+    <span>October 3, 2026</span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
